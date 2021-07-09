@@ -84,52 +84,21 @@
 
             <form @submit.prevent="showGiftInfo" class="grid gap-4">
               <div class="grid gap-2">
-                <p class="font-medium text-left">Name</p>
-                <input
-                  class="
-                    bg-white
-                    py-2
-                    px-4
-                    outline-none
-                    border border-linen
-                    focus:border-linen-darker
-                  "
-                  type="text"
-                  v-model="guestForm.data.name"
-                  spellcheck="false"
-                />
+                <Input label="Name" v-model="guestForm.data.name" name="name" />
               </div>
               <div class="grid gap-2">
-                <p class="font-medium text-left">Phone Number</p>
-                <input
-                  class="
-                    bg-white
-                    py-2
-                    px-4
-                    outline-none
-                    border border-linen
-                    focus:border-linen-darker
-                  "
-                  type="text"
+                <Input
+                  label="Phone Number"
                   v-model="guestForm.data.phone"
-                  spellcheck="false"
+                  name="phone"
                 />
               </div>
               <div class="grid gap-2">
-                <p class="font-medium text-left">Address</p>
-                <textarea
-                  class="
-                    bg-white
-                    py-2
-                    px-4
-                    outline-none
-                    border border-linen
-                    focus:border-linen-darker
-                    h-36
-                  "
-                  type="text"
+                <Input
+                  label="Address"
                   v-model="guestForm.data.address"
-                  spellcheck="false"
+                  type="textarea"
+                  name="address"
                 />
               </div>
               <transition name="slide">
@@ -915,36 +884,18 @@
 
         <form @submit.prevent="sendWishes" class="grid gap-4">
           <div class="grid gap-2">
-            <p class="font-medium text-left">Name</p>
-            <input
-              class="
-                bg-white
-                py-2
-                px-4
-                outline-none
-                border border-linen
-                focus:border-linen-darker
-              "
-              type="text"
+            <Input
+              label="Name"
               v-model="wishesForm.data.name"
-              spellcheck="false"
+              name="wishes_name"
             />
           </div>
           <div class="grid gap-2">
-            <p class="font-medium text-left">Wishes for Ina &#38; Alvin</p>
-            <textarea
-              class="
-                bg-white
-                py-2
-                px-4
-                outline-none
-                border border-linen
-                focus:border-linen-darker
-                h-36
-              "
-              type="text"
+            <Input
+              label="Wishes for Ina & Alvin"
               v-model="wishesForm.data.wishes"
-              spellcheck="false"
+              type="textarea"
+              name="wishes_wishes"
             />
           </div>
           <transition name="slide">
@@ -1131,6 +1082,7 @@ import CountdownCard from "@/components/CountdownCard.vue";
 import EmoneyCard from "@/components/EmoneyCard.vue";
 import ImageContainer from "@/components/ImageContainer.vue";
 import Modal from "@/components/Modal.vue";
+import Input from "@/components/Input.vue";
 import Navbar from "@/components/Navbar.vue";
 import mixin from "@/mixin";
 import axios from "axios";
@@ -1146,6 +1098,7 @@ export default {
     CountdownCard,
     EmoneyCard,
     ImageContainer,
+    Input,
     Modal,
     Navbar,
   },
