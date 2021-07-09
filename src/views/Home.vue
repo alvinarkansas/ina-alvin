@@ -4,7 +4,18 @@
       <button
         v-if="scrollY > 600"
         @click="scrollToTop"
-        class="p-2 bg-red-900 text-white transform hover:scale-105 transition-all fixed right-4 bottom-4 z-50"
+        class="
+          p-2
+          bg-red-900
+          text-white
+          transform
+          hover:scale-105
+          transition-all
+          fixed
+          right-4
+          bottom-4
+          z-50
+        "
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -26,10 +37,26 @@
     <div class="w-full jumbotron">
       <modal v-model="modal.address">
         <section
-          class="modal-md inner-modal-fixed fixed-to-auto relative overflow-y-auto overflow-x-hidden"
+          class="
+            modal-md
+            inner-modal-fixed
+            fixed-to-auto
+            relative
+            overflow-y-auto overflow-x-hidden
+          "
         >
           <button
-            class="p-2 text-gray-800 transform hover:scale-105 hover:bg-gray-800 hover:bg-opacity-10 transition-all absolute right-0 top-0"
+            class="
+              p-2
+              text-gray-800
+              transform
+              hover:scale-105
+              hover:bg-gray-800 hover:bg-opacity-10
+              transition-all
+              absolute
+              right-0
+              top-0
+            "
             @click="modal.address = false"
           >
             <svg
@@ -59,7 +86,14 @@
               <div class="grid gap-2">
                 <p class="font-medium text-left">Name</p>
                 <input
-                  class="bg-white py-2 px-4 outline-none border border-linen focus:border-linen-darker"
+                  class="
+                    bg-white
+                    py-2
+                    px-4
+                    outline-none
+                    border border-linen
+                    focus:border-linen-darker
+                  "
                   type="text"
                   v-model="guestForm.data.name"
                   spellcheck="false"
@@ -68,7 +102,14 @@
               <div class="grid gap-2">
                 <p class="font-medium text-left">Phone Number</p>
                 <input
-                  class="bg-white py-2 px-4 outline-none border border-linen focus:border-linen-darker"
+                  class="
+                    bg-white
+                    py-2
+                    px-4
+                    outline-none
+                    border border-linen
+                    focus:border-linen-darker
+                  "
                   type="text"
                   v-model="guestForm.data.phone"
                   spellcheck="false"
@@ -77,7 +118,15 @@
               <div class="grid gap-2">
                 <p class="font-medium text-left">Address</p>
                 <textarea
-                  class="bg-white py-2 px-4 outline-none border border-linen focus:border-linen-darker h-36"
+                  class="
+                    bg-white
+                    py-2
+                    px-4
+                    outline-none
+                    border border-linen
+                    focus:border-linen-darker
+                    h-36
+                  "
                   type="text"
                   v-model="guestForm.data.address"
                   spellcheck="false"
@@ -120,10 +169,26 @@
 
       <modal v-model="modal.gift">
         <section
-          class="modal-lg inner-modal-fixed fixed-to-auto relative overflow-y-auto overflow-x-hidden"
+          class="
+            modal-lg
+            inner-modal-fixed
+            fixed-to-auto
+            relative
+            overflow-y-auto overflow-x-hidden
+          "
         >
           <button
-            class="p-2 text-gray-800 transform hover:scale-105 hover:bg-gray-800 hover:bg-opacity-10 transition-all absolute right-0 top-0"
+            class="
+              p-2
+              text-gray-800
+              transform
+              hover:scale-105
+              hover:bg-gray-800 hover:bg-opacity-10
+              transition-all
+              absolute
+              right-0
+              top-0
+            "
             @click="modal.gift = false"
           >
             <svg
@@ -141,14 +206,22 @@
           </button>
           <main class="grid gap-6 justify-items-center font-cormorant-sc">
             <p
-              class="py-2 md:py-1 md:text-xl font-semibold font-cormorant-uprignt uppercase"
+              class="
+                py-2
+                md:py-1
+                md:text-xl
+                font-semibold font-cormorant-uprignt
+                uppercase
+              "
             >
               THANK YOU, {{ userName }}!
             </p>
 
             <p>
-              We'll be living in Jakarta after we are married. Should you wish
-              to send us gifts, you can send them to this address.
+              Our plan was to live in Jakarta after we are married. But COVID
+              hits us --well, everyone actually-- hard. Given the circumstances,
+              we will be staying in Jogja at the moment. Should you wish to send
+              us gifts, you can send them to this address.
             </p>
 
             <div class="w-1/3 divide-y divide-grey-4">
@@ -157,9 +230,8 @@
             </div>
 
             <p class="font-bold text-base italic px-8 md:px-32">
-              Apartemen Green Park View Tower G Unit G510, Jl. Daan Mogot KM 14,
-              Duri Kosambi, Kecamatan Cengkareng, Kota Jakarta Barat, Daerah
-              Khusus Ibukota Jakarta 11730
+              Perum. Permata Monjali A2 Jl. Lempongsari, Sariharjo, Ngaglik,
+              Sleman, Daerah Istimewa Yogyakarta 55581
             </p>
 
             <div class="w-1/3 divide-y divide-grey-4">
@@ -291,7 +363,18 @@
         </section>
       </modal>
       <nav
-        class="grid grid-cols-3 py-4 sm:py-6 px-8 md:px-32 opacity-60 text-gray-700 sm:font-medium text-sm md:text-lg"
+        class="
+          grid grid-cols-3
+          py-4
+          sm:py-6
+          px-8
+          md:px-32
+          opacity-60
+          text-gray-700
+          sm:font-medium
+          text-sm
+          md:text-lg
+        "
       >
         <div id="logo" class="col-span-1 flex items-center">
           <img
@@ -302,23 +385,45 @@
         </div>
         <div
           id="menu"
-          class="col-span-2 grid grid-flow-col auto-cols-max gap-2 sm:gap-6 place-self-end"
+          class="
+            col-span-2
+            grid grid-flow-col
+            auto-cols-max
+            gap-2
+            sm:gap-6
+            place-self-end
+          "
         >
           <a
             href="#invitation"
-            class="hover:text-yellow-800 transform hover:scale-110 transition-all"
+            class="
+              hover:text-yellow-800
+              transform
+              hover:scale-110
+              transition-all
+            "
           >
             INVITATION
           </a>
           <a
             href="#gallery"
-            class="hover:text-yellow-800 transform hover:scale-110 transition-all"
+            class="
+              hover:text-yellow-800
+              transform
+              hover:scale-110
+              transition-all
+            "
           >
             GALLERY
           </a>
           <a
             href="#wishes"
-            class="hover:text-yellow-800 transform hover:scale-110 transition-all"
+            class="
+              hover:text-yellow-800
+              transform
+              hover:scale-110
+              transition-all
+            "
           >
             WISHES
           </a>
@@ -327,7 +432,19 @@
 
       <section class="batik-deco">
         <section
-          class="py-10 sm:py-24 md:py-48 xl:py-56 grid grid-flow-col auto-rows-max auto-cols-max gap-4 md:gap-16 justify-center px-16 grad-trans-linen-trans"
+          class="
+            py-10
+            sm:py-24
+            md:py-48
+            xl:py-56
+            grid grid-flow-col
+            auto-rows-max auto-cols-max
+            gap-4
+            md:gap-16
+            justify-center
+            px-16
+            grad-trans-linen-trans
+          "
         >
           <CountdownCard :value="days" unit="DAYS" />
           <CountdownCard :value="hours" unit="HOURS" />
@@ -344,10 +461,30 @@
 
     <section id="invitation" class="w-full px-4">
       <div
-        class="w-full auto-rows-max grid gap-8 md:gap-16 place-items-center py-8 md:py-16 font-cormorant-sc grad-trans-white-trans"
+        class="
+          w-full
+          auto-rows-max
+          grid
+          gap-8
+          md:gap-16
+          place-items-center
+          py-8
+          md:py-16
+          font-cormorant-sc
+          grad-trans-white-trans
+        "
       >
         <div
-          class="grid gap-4 md:text-lg px-8 sm:px-16 md:px-24 lg:px-60 place-items-center"
+          class="
+            grid
+            gap-4
+            md:text-lg
+            px-8
+            sm:px-16
+            md:px-24
+            lg:px-60
+            place-items-center
+          "
         >
           <img
             src="../assets/deco/batik-deco-small-5.png"
@@ -372,16 +509,50 @@
         <p class="md:text-xl">Pernikahan</p>
 
         <div
-          class="grid gap-4 sm:grid-flow-col sm:grid-cols-7 md:grid-cols-5 place-items-center"
+          class="
+            grid
+            gap-4
+            sm:grid-flow-col sm:grid-cols-7
+            md:grid-cols-5
+            place-items-center
+          "
         >
           <div
-            class="grid gap-4 place-items-center sm:col-span-3 md:col-span-2 md:text-xl sm:px-4"
+            class="
+              grid
+              gap-4
+              place-items-center
+              sm:col-span-3
+              md:col-span-2
+              md:text-xl
+              sm:px-4
+            "
           >
             <div
-              class="rounded-full h-16 md:h-32 w-16 md:w-32 bg-gradient-to-t from-yellow-600 via-red-500 to-purple-400 p-1 md:p-2 select-none"
+              class="
+                rounded-full
+                h-16
+                md:h-32
+                w-16
+                md:w-32
+                bg-gradient-to-t
+                from-yellow-600
+                via-red-500
+                to-purple-400
+                p-1
+                md:p-2
+                select-none
+              "
             >
               <a
-                class="block rounded-full ring-2 md:ring-4 ring-white cursor-pointer"
+                class="
+                  block
+                  rounded-full
+                  ring-2
+                  md:ring-4
+                  ring-white
+                  cursor-pointer
+                "
                 href="https://www.instagram.com/sakinahhbb/"
                 target="_blank"
               >
@@ -396,13 +567,40 @@
           <div class="text-3xl sm:text-6xl mb-2">&#38;</div>
 
           <div
-            class="grid gap-4 place-items-center sm:col-span-3 md:col-span-2 md:text-xl"
+            class="
+              grid
+              gap-4
+              place-items-center
+              sm:col-span-3
+              md:col-span-2
+              md:text-xl
+            "
           >
             <div
-              class="rounded-full h-16 md:h-32 w-16 md:w-32 bg-gradient-to-t from-yellow-600 via-red-500 to-purple-400 p-1 md:p-2 select-none"
+              class="
+                rounded-full
+                h-16
+                md:h-32
+                w-16
+                md:w-32
+                bg-gradient-to-t
+                from-yellow-600
+                via-red-500
+                to-purple-400
+                p-1
+                md:p-2
+                select-none
+              "
             >
               <a
-                class="block rounded-full ring-2 md:ring-4 ring-white cursor-pointer"
+                class="
+                  block
+                  rounded-full
+                  ring-2
+                  md:ring-4
+                  ring-white
+                  cursor-pointer
+                "
                 href="https://www.instagram.com/alvinarkansas/"
                 target="_blank"
               >
@@ -421,10 +619,26 @@
         <p class="md:text-xl">Akan diselenggarakan pada</p>
 
         <div
-          class="w-full grid gap-4 md:gap-16 md:px-32 md:grid-flow-col md:grid-cols-2 md:text-lg"
+          class="
+            w-full
+            grid
+            gap-4
+            md:gap-16
+            md:px-32
+            md:grid-flow-col md:grid-cols-2
+            md:text-lg
+          "
         >
           <div
-            class="bg-linen bg-opacity-50 grid gap-4 place-items-center px-4 md:px-12 py-12"
+            class="
+              bg-linen bg-opacity-50
+              grid
+              gap-4
+              place-items-center
+              px-4
+              md:px-12
+              py-12
+            "
           >
             <img
               src="../assets/deco/batik-deco-small-1.png"
@@ -457,7 +671,16 @@
             </p>
 
             <button
-              class="py-2 px-4 bg-red-900 text-white font-bold transform hover:scale-105 transition-all"
+              class="
+                py-2
+                px-4
+                bg-red-900
+                text-white
+                font-bold
+                transform
+                hover:scale-105
+                transition-all
+              "
               @click="
                 openInNewTab(
                   'https://www.google.com/maps/place/Taman+Indie/@-7.939455,112.6646045,15z/data=!4m5!3m4!1s0x0:0x7234a042cc61972f!8m2!3d-7.939455!4d112.6646045'
@@ -469,7 +692,14 @@
           </div>
 
           <div
-            class="bg-linen bg-opacity-50 grid gap-4 place-items-center px-4 py-12"
+            class="
+              bg-linen bg-opacity-50
+              grid
+              gap-4
+              place-items-center
+              px-4
+              py-12
+            "
           >
             <img
               src="../assets/deco/batik-deco-small-2.png"
@@ -503,7 +733,16 @@
             </p>
 
             <button
-              class="py-2 px-4 bg-red-900 text-white font-bold transform hover:scale-105 transition-all"
+              class="
+                py-2
+                px-4
+                bg-red-900
+                text-white
+                font-bold
+                transform
+                hover:scale-105
+                transition-all
+              "
               @click="
                 openInNewTab(
                   'https://www.google.com/maps/place/INDOLUXE+HOTEL+JOGJAKARTA/@-7.7502299,110.3702439,17z/data=!3m1!4b1!4m8!3m7!1s0x2e7a59948461ea05:0x6215750c0500c63e!5m2!4m1!1i2!8m2!3d-7.7502299!4d110.3724326'
@@ -579,7 +818,18 @@
         </p>
 
         <div
-          class="bg-linen bg-opacity-50 w-full sm:w-3/4 lg:w-1/3 grid gap-6 place-items-center px-4 md:px-12 py-12"
+          class="
+            bg-linen bg-opacity-50
+            w-full
+            sm:w-3/4
+            lg:w-1/3
+            grid
+            gap-6
+            place-items-center
+            px-4
+            md:px-12
+            py-12
+          "
         >
           <img
             src="../assets/deco/batik-deco-small-6.png"
@@ -599,33 +849,115 @@
 
           <div class="grid grid-cols-2 place-items-center gap-x-8 gap-y-6">
             <div
-              class="rounded-full h-16 md:h-32 w-16 md:w-32 bg-gradient-to-t from-yellow-600 via-red-500 to-purple-400 p-1 md:p-2 select-none relative"
+              class="
+                rounded-full
+                h-16
+                md:h-32
+                w-16
+                md:w-32
+                bg-gradient-to-t
+                from-yellow-600
+                via-red-500
+                to-purple-400
+                p-1
+                md:p-2
+                select-none
+                relative
+              "
             >
               <a
-                class="block rounded-full ring-2 md:ring-4 ring-white cursor-pointer"
+                class="
+                  block
+                  rounded-full
+                  ring-2
+                  md:ring-4
+                  ring-white
+                  cursor-pointer
+                "
                 href="https://www.instagram.com/sakinahhbb/"
                 target="_blank"
               >
                 <img src="../assets/ina-round.png" alt="Nurus Sakinah" />
               </a>
               <p
-                class="text-2xs sm:text-xs md:text-sm py-0.5 sm:py-1 px-2 rounded bg-purple-400 text-white absolute -bottom-1 sm:-bottom-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-t from-yellow-600 to-red-500 font-bold"
+                class="
+                  text-2xs
+                  sm:text-xs
+                  md:text-sm
+                  py-0.5
+                  sm:py-1
+                  px-2
+                  rounded
+                  bg-purple-400
+                  text-white
+                  absolute
+                  -bottom-1
+                  sm:-bottom-3
+                  left-1/2
+                  transform
+                  -translate-x-1/2
+                  bg-gradient-to-t
+                  from-yellow-600
+                  to-red-500
+                  font-bold
+                "
               >
                 LIVE
               </p>
             </div>
             <div
-              class="rounded-full h-16 md:h-32 w-16 md:w-32 bg-gradient-to-t from-yellow-600 via-red-500 to-purple-400 p-1 md:p-2 select-none relative"
+              class="
+                rounded-full
+                h-16
+                md:h-32
+                w-16
+                md:w-32
+                bg-gradient-to-t
+                from-yellow-600
+                via-red-500
+                to-purple-400
+                p-1
+                md:p-2
+                select-none
+                relative
+              "
             >
               <a
-                class="block rounded-full ring-2 md:ring-4 ring-white cursor-pointer"
+                class="
+                  block
+                  rounded-full
+                  ring-2
+                  md:ring-4
+                  ring-white
+                  cursor-pointer
+                "
                 href="https://www.instagram.com/alvinarkansas/"
                 target="_blank"
               >
                 <img src="../assets/alvin-round.png" alt="Alvin Arkansas" />
               </a>
               <p
-                class="text-2xs sm:text-xs md:text-sm py-0.5 sm:py-1 px-2 rounded bg-purple-400 text-white absolute -bottom-1 sm:-bottom-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-t from-yellow-600 to-red-500 font-bold"
+                class="
+                  text-2xs
+                  sm:text-xs
+                  md:text-sm
+                  py-0.5
+                  sm:py-1
+                  px-2
+                  rounded
+                  bg-purple-400
+                  text-white
+                  absolute
+                  -bottom-1
+                  sm:-bottom-3
+                  left-1/2
+                  transform
+                  -translate-x-1/2
+                  bg-gradient-to-t
+                  from-yellow-600
+                  to-red-500
+                  font-bold
+                "
               >
                 LIVE
               </p>
@@ -637,7 +969,16 @@
           <p class="md:text-xl">July 17 &#38; 24, 2021 at time of event</p>
 
           <button
-            class="py-2 px-4 bg-red-900 text-white font-bold transform hover:scale-105 transition-all"
+            class="
+              py-2
+              px-4
+              bg-red-900
+              text-white
+              font-bold
+              transform
+              hover:scale-105
+              transition-all
+            "
             @click="openInNewTab('https://www.instagram.com/sakinahhbb/')"
           >
             JOIN LIVE STREAMING
@@ -778,7 +1119,14 @@
           <div class="grid gap-2">
             <p class="font-medium text-left">Name</p>
             <input
-              class="bg-white py-2 px-4 outline-none border border-linen focus:border-linen-darker"
+              class="
+                bg-white
+                py-2
+                px-4
+                outline-none
+                border border-linen
+                focus:border-linen-darker
+              "
               type="text"
               v-model="wishesForm.data.name"
               spellcheck="false"
@@ -787,7 +1135,15 @@
           <div class="grid gap-2">
             <p class="font-medium text-left">Wishes for Ina &#38; Alvin</p>
             <textarea
-              class="bg-white py-2 px-4 outline-none border border-linen focus:border-linen-darker h-36"
+              class="
+                bg-white
+                py-2
+                px-4
+                outline-none
+                border border-linen
+                focus:border-linen-darker
+                h-36
+              "
               type="text"
               v-model="wishesForm.data.wishes"
               spellcheck="false"
@@ -908,7 +1264,17 @@
       </template>
 
       <div
-        class="md:w-1/3 px-4 grid gap-6 md:text-lg place-items-center mt-48 mb-16 mx-auto"
+        class="
+          md:w-1/3
+          px-4
+          grid
+          gap-6
+          md:text-lg
+          place-items-center
+          mt-48
+          mb-16
+          mx-auto
+        "
       >
         <img
           src="../assets/illustrations/illustration-gift.png"
@@ -924,7 +1290,16 @@
         <div class="w-full grid sm:block">
           <button
             @click="modal.address = !modal.address"
-            class="py-2 px-4 bg-red-900 text-white font-bold transform hover:scale-105 transition-all"
+            class="
+              py-2
+              px-4
+              bg-red-900
+              text-white
+              font-bold
+              transform
+              hover:scale-105
+              transition-all
+            "
           >
             SHOW ME
           </button>
@@ -934,7 +1309,13 @@
 
     <footer class="p-8 md:p-16 grid gap-2 bg-linen font-cormorant-sc">
       <div
-        class="grid grid-flow-col gap-1 auto-cols-max items-center justify-center"
+        class="
+          grid grid-flow-col
+          gap-1
+          auto-cols-max
+          items-center
+          justify-center
+        "
       >
         <span> Photos by </span>
         <a
@@ -1324,7 +1705,7 @@ export default {
 
 .video-frame {
   height: 256px;
-  /* @apply sm:h-1\/3-screen md:h-1\/2-screen lg:h-7\/8-screen; */
+  @apply sm:h-1/3-screen md:h-1/2-screen lg:h-7/8-screen;
 }
 
 .slider-container {

@@ -36,6 +36,9 @@ module.exports = {
         "1/3-screen": "33.333333vw",
         "1/4-screen": "25vw",
       },
+      zIndex: {
+        60: "60",
+      },
     },
   },
   variants: {

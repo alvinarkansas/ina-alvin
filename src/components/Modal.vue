@@ -3,7 +3,7 @@
     <div
       v-if="modelValue"
       @click="$emit('update:modelValue', false)"
-      class="w-screen h-screen bg-black bg-opacity-50 fixed inset-0 z-50"
+      class="w-screen h-screen bg-black bg-opacity-50 fixed inset-0 z-60"
     />
   </transition>
   <transition :name="screenWidth < 640 ? 'mobile-slide-up' : 'slide-up'" appear>
@@ -16,7 +16,7 @@
         p-4
         sm:p-6
         shadow-custom
-        z-50
+        z-60
         transition-colors
         duration-500
         transform
