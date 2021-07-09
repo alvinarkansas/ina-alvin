@@ -35,7 +35,7 @@
     </transition>
 
     <div class="w-full jumbotron">
-      <modal v-model="modal.address">
+      <Modal v-model="modal.address">
         <section
           class="
             modal-md
@@ -84,52 +84,21 @@
 
             <form @submit.prevent="showGiftInfo" class="grid gap-4">
               <div class="grid gap-2">
-                <p class="font-medium text-left">Name</p>
-                <input
-                  class="
-                    bg-white
-                    py-2
-                    px-4
-                    outline-none
-                    border border-linen
-                    focus:border-linen-darker
-                  "
-                  type="text"
-                  v-model="guestForm.data.name"
-                  spellcheck="false"
-                />
+                <Input label="Name" v-model="guestForm.data.name" name="name" />
               </div>
               <div class="grid gap-2">
-                <p class="font-medium text-left">Phone Number</p>
-                <input
-                  class="
-                    bg-white
-                    py-2
-                    px-4
-                    outline-none
-                    border border-linen
-                    focus:border-linen-darker
-                  "
-                  type="text"
+                <Input
+                  label="Phone Number"
                   v-model="guestForm.data.phone"
-                  spellcheck="false"
+                  name="phone"
                 />
               </div>
               <div class="grid gap-2">
-                <p class="font-medium text-left">Address</p>
-                <textarea
-                  class="
-                    bg-white
-                    py-2
-                    px-4
-                    outline-none
-                    border border-linen
-                    focus:border-linen-darker
-                    h-36
-                  "
-                  type="text"
+                <Input
+                  label="Address"
                   v-model="guestForm.data.address"
-                  spellcheck="false"
+                  type="textarea"
+                  name="address"
                 />
               </div>
               <transition name="slide">
@@ -165,9 +134,9 @@
             </form>
           </main>
         </section>
-      </modal>
+      </Modal>
 
-      <modal v-model="modal.gift">
+      <Modal v-model="modal.gift">
         <section
           class="
             modal-lg
@@ -242,193 +211,32 @@
             <p>Or if you’re into electronic money, we accept these methods</p>
 
             <div class="grid gap-8 md:grid-cols-3 md:gap-6 lg:gap-16">
-              <div
-                class="grid gap-2 place-items-center p-4 pt-2"
-                style="border: 2px solid #005faf"
-              >
-                <p class="font-bold" style="color: #005faf">BCA</p>
-                <div class="grid place-items-center">
-                  <p>Alvin Arkansas</p>
-                  <img src="../assets/QR/BCA.png" alt="BCA" class="w-56" />
-                  <p
-                    v-if="!copyNotification.bcaNumber"
-                    class="font-bold text-base relative font-cormorant-infant"
-                    ref="bcaNumber"
-                  >
-                    8610326570
-                    <svg
-                      @click="copyToClipboard('bcaNumber')"
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-5 w-5 absolute text-gray-600 cursor-pointer"
-                      style="right: -1.5rem; bottom: 2px"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        d="M9 2a2 2 0 00-2 2v8a2 2 0 002 2h6a2 2 0 002-2V6.414A2 2 0 0016.414 5L14 2.586A2 2 0 0012.586 2H9z"
-                      />
-                      <path
-                        d="M3 8a2 2 0 012-2v10h8a2 2 0 01-2 2H5a2 2 0 01-2-2V8z"
-                      />
-                    </svg>
-                  </p>
-                  <p
-                    v-else
-                    class="bg-red-900 text-white px-2 font-bold text-base"
-                  >
-                    copied to clipboard
-                  </p>
-                </div>
-              </div>
+              <EmoneyCard
+                theme="#005FAF"
+                payment="BCA"
+                accNumber="8610326570"
+                ref="bcaNumber"
+              />
 
-              <div
-                class="grid gap-2 place-items-center p-4 pt-2"
-                style="border: 2px solid #66ad15"
-              >
-                <p class="font-bold" style="color: #66ad15">GOPAY</p>
-                <div class="grid place-items-center">
-                  <p>Alvin Arkansas</p>
-                  <img src="../assets/QR/GOPAY.png" alt="GOPAY" class="w-56" />
-                  <p
-                    v-if="!copyNotification.gopayNumber"
-                    class="font-bold text-base relative font-cormorant-infant"
-                    ref="gopayNumber"
-                  >
-                    081226611952
-                    <svg
-                      @click="copyToClipboard('gopayNumber')"
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-5 w-5 absolute text-gray-600 cursor-pointer"
-                      style="right: -1.5rem; bottom: 2px"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        d="M9 2a2 2 0 00-2 2v8a2 2 0 002 2h6a2 2 0 002-2V6.414A2 2 0 0016.414 5L14 2.586A2 2 0 0012.586 2H9z"
-                      />
-                      <path
-                        d="M3 8a2 2 0 012-2v10h8a2 2 0 01-2 2H5a2 2 0 01-2-2V8z"
-                      />
-                    </svg>
-                  </p>
-                  <p
-                    v-else
-                    class="bg-red-900 text-white px-2 font-bold text-base"
-                  >
-                    copied to clipboard
-                  </p>
-                </div>
-              </div>
+              <EmoneyCard
+                theme="#66AD15"
+                payment="GOPAY"
+                accNumber="081226611952"
+                ref="gopayNumber"
+              />
 
-              <div
-                class="grid gap-2 place-items-center p-4 pt-2"
-                style="border: 2px solid #4b2489"
-              >
-                <p class="font-bold" style="color: #4b2489">OVO</p>
-                <div class="grid place-items-center">
-                  <p>Alvin Arkansas</p>
-                  <img src="../assets/QR/OVO.png" alt="OVO" class="w-56" />
-                  <p
-                    v-if="!copyNotification.ovoNumber"
-                    class="font-bold text-base relative font-cormorant-infant"
-                    ref="ovoNumber"
-                  >
-                    081226611952
-                    <svg
-                      @click="copyToClipboard('ovoNumber')"
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-5 w-5 absolute text-gray-600 cursor-pointer"
-                      style="right: -1.5rem; bottom: 2px"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        d="M9 2a2 2 0 00-2 2v8a2 2 0 002 2h6a2 2 0 002-2V6.414A2 2 0 0016.414 5L14 2.586A2 2 0 0012.586 2H9z"
-                      />
-                      <path
-                        d="M3 8a2 2 0 012-2v10h8a2 2 0 01-2 2H5a2 2 0 01-2-2V8z"
-                      />
-                    </svg>
-                  </p>
-                  <p
-                    v-else
-                    class="bg-red-900 text-white px-2 font-bold text-base"
-                  >
-                    copied to clipboard
-                  </p>
-                </div>
-              </div>
+              <EmoneyCard
+                theme="#4B2489"
+                payment="OVO"
+                accNumber="081226611952"
+                ref="ovoNumber"
+              />
             </div>
           </main>
         </section>
-      </modal>
-      <nav
-        class="
-          grid grid-cols-3
-          py-4
-          sm:py-6
-          px-8
-          md:px-32
-          opacity-60
-          text-gray-700
-          sm:font-medium
-          text-sm
-          md:text-lg
-        "
-      >
-        <div id="logo" class="col-span-1 flex items-center">
-          <img
-            class="w-4 md:w-12"
-            src="../assets/logo/logo-black.png"
-            alt="logo"
-          />
-        </div>
-        <div
-          id="menu"
-          class="
-            col-span-2
-            grid grid-flow-col
-            auto-cols-max
-            gap-2
-            sm:gap-6
-            place-self-end
-          "
-        >
-          <a
-            href="#invitation"
-            class="
-              hover:text-yellow-800
-              transform
-              hover:scale-110
-              transition-all
-            "
-          >
-            INVITATION
-          </a>
-          <a
-            href="#gallery"
-            class="
-              hover:text-yellow-800
-              transform
-              hover:scale-110
-              transition-all
-            "
-          >
-            GALLERY
-          </a>
-          <a
-            href="#wishes"
-            class="
-              hover:text-yellow-800
-              transform
-              hover:scale-110
-              transition-all
-            "
-          >
-            WISHES
-          </a>
-        </div>
-      </nav>
+      </Modal>
+
+      <Navbar />
 
       <section class="batik-deco">
         <section
@@ -670,25 +478,10 @@
               Jl. Araya Megah No. 9, Pandanwangi Kec. Blimbing, Kota Malang
             </p>
 
-            <button
-              class="
-                py-2
-                px-4
-                bg-red-900
-                text-white
-                font-bold
-                transform
-                hover:scale-105
-                transition-all
-              "
-              @click="
-                openInNewTab(
-                  'https://www.google.com/maps/place/Taman+Indie/@-7.939455,112.6646045,15z/data=!4m5!3m4!1s0x0:0x7234a042cc61972f!8m2!3d-7.939455!4d112.6646045'
-                )
-              "
-            >
-              VIEW LOCATION
-            </button>
+            <Button
+              label="view location"
+              @click="openInNewTab(TAMAN_INDIE_LOC_URL)"
+            />
           </div>
 
           <div
@@ -732,25 +525,10 @@
               Sleman, DIY
             </p>
 
-            <button
-              class="
-                py-2
-                px-4
-                bg-red-900
-                text-white
-                font-bold
-                transform
-                hover:scale-105
-                transition-all
-              "
-              @click="
-                openInNewTab(
-                  'https://www.google.com/maps/place/INDOLUXE+HOTEL+JOGJAKARTA/@-7.7502299,110.3702439,17z/data=!3m1!4b1!4m8!3m7!1s0x2e7a59948461ea05:0x6215750c0500c63e!5m2!4m1!1i2!8m2!3d-7.7502299!4d110.3724326'
-                )
-              "
-            >
-              VIEW LOCATION
-            </button>
+            <Button
+              label="view_location"
+              @click="openInNewTab(INDOLUXE_LOC_URL)"
+            />
           </div>
         </div>
 
@@ -968,21 +746,10 @@
 
           <p class="md:text-xl">July 17 &#38; 24, 2021 at time of event</p>
 
-          <button
-            class="
-              py-2
-              px-4
-              bg-red-900
-              text-white
-              font-bold
-              transform
-              hover:scale-105
-              transition-all
-            "
+          <Button
+            label="join live streaming"
             @click="openInNewTab('https://www.instagram.com/sakinahhbb/')"
-          >
-            JOIN LIVE STREAMING
-          </button>
+          />
         </div>
       </div>
     </section>
@@ -1117,36 +884,18 @@
 
         <form @submit.prevent="sendWishes" class="grid gap-4">
           <div class="grid gap-2">
-            <p class="font-medium text-left">Name</p>
-            <input
-              class="
-                bg-white
-                py-2
-                px-4
-                outline-none
-                border border-linen
-                focus:border-linen-darker
-              "
-              type="text"
+            <Input
+              label="Name"
               v-model="wishesForm.data.name"
-              spellcheck="false"
+              name="wishes_name"
             />
           </div>
           <div class="grid gap-2">
-            <p class="font-medium text-left">Wishes for Ina &#38; Alvin</p>
-            <textarea
-              class="
-                bg-white
-                py-2
-                px-4
-                outline-none
-                border border-linen
-                focus:border-linen-darker
-                h-36
-              "
-              type="text"
+            <Input
+              label="Wishes for Ina & Alvin"
               v-model="wishesForm.data.wishes"
-              spellcheck="false"
+              type="textarea"
+              name="wishes_wishes"
             />
           </div>
           <transition name="slide">
@@ -1288,21 +1037,7 @@
         </p>
 
         <div class="w-full grid sm:block">
-          <button
-            @click="modal.address = !modal.address"
-            class="
-              py-2
-              px-4
-              bg-red-900
-              text-white
-              font-bold
-              transform
-              hover:scale-105
-              transition-all
-            "
-          >
-            SHOW ME
-          </button>
+          <Button label="show_me" @click="modal.address = !modal.address" />
         </div>
       </div>
     </section>
@@ -1342,9 +1077,13 @@
 </template>
 
 <script>
+import Button from "@/components/Button.vue";
 import CountdownCard from "@/components/CountdownCard.vue";
+import EmoneyCard from "@/components/EmoneyCard.vue";
 import ImageContainer from "@/components/ImageContainer.vue";
 import Modal from "@/components/Modal.vue";
+import Input from "@/components/Input.vue";
+import Navbar from "@/components/Navbar.vue";
 import mixin from "@/mixin";
 import axios from "axios";
 import dayjs from "dayjs";
@@ -1354,7 +1093,15 @@ dayjs.extend(relativeTime);
 
 export default {
   name: "Home",
-  components: { CountdownCard, ImageContainer, Modal },
+  components: {
+    Button,
+    CountdownCard,
+    EmoneyCard,
+    ImageContainer,
+    Input,
+    Modal,
+    Navbar,
+  },
   mixins: [mixin],
   data() {
     return {
@@ -1397,14 +1144,13 @@ export default {
         currentIndex: 0,
         done: false,
       },
-      copyNotification: {
-        bcaNumber: false,
-        gopayNumber: false,
-        ovoNumber: false,
-      },
       showCopiedNotification: false,
       scrollY: 0,
       scrollTimer: 0,
+      TAMAN_INDIE_LOC_URL:
+        "https://www.google.com/maps/place/Taman+Indie/@-7.939455,112.6646045,15z/data=!4m5!3m4!1s0x0:0x7234a042cc61972f!8m2!3d-7.939455!4d112.6646045",
+      INDOLUXE_LOC_URL:
+        "https://www.google.com/maps/place/INDOLUXE+HOTEL+JOGJAKARTA/@-7.7502299,110.3702439,17z/data=!3m1!4b1!4m8!3m7!1s0x2e7a59948461ea05:0x6215750c0500c63e!5m2!4m1!1i2!8m2!3d-7.7502299!4d110.3724326",
     };
   },
   computed: {
@@ -1500,13 +1246,6 @@ export default {
           this.swipe.prevTranslate + currentPosition - this.swipe.startPos;
       }
     },
-    preventContextMenu() {
-      window.oncontextmenu = (event) => {
-        event.preventDefault();
-        event.stopPropagation();
-        return false;
-      };
-    },
     openInNewTab(url) {
       window.open(url, "_blank");
     },
@@ -1540,9 +1279,6 @@ export default {
         console.log(error);
       }
     },
-    loadMoreWishes() {
-      this.wishesLimit += 6;
-    },
     async submitForm(formName, tableName) {
       this[formName].data.created_at = new Date();
       try {
@@ -1571,28 +1307,6 @@ export default {
       this.modal.address = false;
       this.modal.gift = true;
     },
-    selectText(element) {
-      let range;
-      if (document.selection) {
-        // IE
-        range = document.body.createTextRange();
-        range.moveToElementText(element);
-        range.select();
-      } else if (window.getSelection) {
-        range = document.createRange();
-        range.selectNode(element);
-        window.getSelection().removeAllRanges();
-        window.getSelection().addRange(range);
-      }
-    },
-    copyToClipboard(ref) {
-      this.selectText(this.$refs[ref]);
-      document.execCommand("copy");
-      this.copyNotification[ref] = true;
-      setTimeout(() => {
-        this.copyNotification[ref] = false;
-      }, 1500);
-    },
     scrollToTop() {
       window.scrollTo({ top: 0, behavior: "smooth" });
     },
@@ -1609,7 +1323,6 @@ export default {
     this.countdown();
     window.addEventListener("scroll", this.handleScroll);
     await this.getWishes();
-    this.preventContextMenu();
   },
 };
 </script>
