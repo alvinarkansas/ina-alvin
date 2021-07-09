@@ -242,122 +242,26 @@
             <p>Or if you’re into electronic money, we accept these methods</p>
 
             <div class="grid gap-8 md:grid-cols-3 md:gap-6 lg:gap-16">
-              <div
-                class="grid gap-2 place-items-center p-4 pt-2"
-                style="border: 2px solid #005faf"
-              >
-                <p class="font-bold" style="color: #005faf">BCA</p>
-                <div class="grid place-items-center">
-                  <p>Alvin Arkansas</p>
-                  <img src="../assets/QR/BCA.png" alt="BCA" class="w-56" />
-                  <p
-                    v-if="!copyNotification.bcaNumber"
-                    class="font-bold text-base relative font-cormorant-infant"
-                    ref="bcaNumber"
-                  >
-                    8610326570
-                    <svg
-                      @click="copyToClipboard('bcaNumber')"
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-5 w-5 absolute text-gray-600 cursor-pointer"
-                      style="right: -1.5rem; bottom: 2px"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        d="M9 2a2 2 0 00-2 2v8a2 2 0 002 2h6a2 2 0 002-2V6.414A2 2 0 0016.414 5L14 2.586A2 2 0 0012.586 2H9z"
-                      />
-                      <path
-                        d="M3 8a2 2 0 012-2v10h8a2 2 0 01-2 2H5a2 2 0 01-2-2V8z"
-                      />
-                    </svg>
-                  </p>
-                  <p
-                    v-else
-                    class="bg-red-900 text-white px-2 font-bold text-base"
-                  >
-                    copied to clipboard
-                  </p>
-                </div>
-              </div>
+              <EmoneyCard
+                theme="#005FAF"
+                payment="BCA"
+                accNumber="8610326570"
+                ref="bcaNumber"
+              />
 
-              <div
-                class="grid gap-2 place-items-center p-4 pt-2"
-                style="border: 2px solid #66ad15"
-              >
-                <p class="font-bold" style="color: #66ad15">GOPAY</p>
-                <div class="grid place-items-center">
-                  <p>Alvin Arkansas</p>
-                  <img src="../assets/QR/GOPAY.png" alt="GOPAY" class="w-56" />
-                  <p
-                    v-if="!copyNotification.gopayNumber"
-                    class="font-bold text-base relative font-cormorant-infant"
-                    ref="gopayNumber"
-                  >
-                    081226611952
-                    <svg
-                      @click="copyToClipboard('gopayNumber')"
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-5 w-5 absolute text-gray-600 cursor-pointer"
-                      style="right: -1.5rem; bottom: 2px"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        d="M9 2a2 2 0 00-2 2v8a2 2 0 002 2h6a2 2 0 002-2V6.414A2 2 0 0016.414 5L14 2.586A2 2 0 0012.586 2H9z"
-                      />
-                      <path
-                        d="M3 8a2 2 0 012-2v10h8a2 2 0 01-2 2H5a2 2 0 01-2-2V8z"
-                      />
-                    </svg>
-                  </p>
-                  <p
-                    v-else
-                    class="bg-red-900 text-white px-2 font-bold text-base"
-                  >
-                    copied to clipboard
-                  </p>
-                </div>
-              </div>
+              <EmoneyCard
+                theme="#66AD15"
+                payment="GOPAY"
+                accNumber="081226611952"
+                ref="gopayNumber"
+              />
 
-              <div
-                class="grid gap-2 place-items-center p-4 pt-2"
-                style="border: 2px solid #4b2489"
-              >
-                <p class="font-bold" style="color: #4b2489">OVO</p>
-                <div class="grid place-items-center">
-                  <p>Alvin Arkansas</p>
-                  <img src="../assets/QR/OVO.png" alt="OVO" class="w-56" />
-                  <p
-                    v-if="!copyNotification.ovoNumber"
-                    class="font-bold text-base relative font-cormorant-infant"
-                    ref="ovoNumber"
-                  >
-                    081226611952
-                    <svg
-                      @click="copyToClipboard('ovoNumber')"
-                      xmlns="http://www.w3.org/2000/svg"
-                      class="h-5 w-5 absolute text-gray-600 cursor-pointer"
-                      style="right: -1.5rem; bottom: 2px"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        d="M9 2a2 2 0 00-2 2v8a2 2 0 002 2h6a2 2 0 002-2V6.414A2 2 0 0016.414 5L14 2.586A2 2 0 0012.586 2H9z"
-                      />
-                      <path
-                        d="M3 8a2 2 0 012-2v10h8a2 2 0 01-2 2H5a2 2 0 01-2-2V8z"
-                      />
-                    </svg>
-                  </p>
-                  <p
-                    v-else
-                    class="bg-red-900 text-white px-2 font-bold text-base"
-                  >
-                    copied to clipboard
-                  </p>
-                </div>
-              </div>
+              <EmoneyCard
+                theme="#4B2489"
+                payment="OVO"
+                accNumber="081226611952"
+                ref="ovoNumber"
+              />
             </div>
           </main>
         </section>
@@ -1278,6 +1182,7 @@
 
 <script>
 import CountdownCard from "@/components/CountdownCard.vue";
+import EmoneyCard from "@/components/EmoneyCard.vue";
 import ImageContainer from "@/components/ImageContainer.vue";
 import Modal from "@/components/Modal.vue";
 import Navbar from "@/components/Navbar.vue";
@@ -1290,7 +1195,7 @@ dayjs.extend(relativeTime);
 
 export default {
   name: "Home",
-  components: { CountdownCard, ImageContainer, Modal, Navbar },
+  components: { CountdownCard, EmoneyCard, ImageContainer, Modal, Navbar },
   mixins: [mixin],
   data() {
     return {
@@ -1332,11 +1237,6 @@ export default {
         animationID: 0,
         currentIndex: 0,
         done: false,
-      },
-      copyNotification: {
-        bcaNumber: false,
-        gopayNumber: false,
-        ovoNumber: false,
       },
       showCopiedNotification: false,
       scrollY: 0,
@@ -1469,9 +1369,6 @@ export default {
         console.log(error);
       }
     },
-    loadMoreWishes() {
-      this.wishesLimit += 6;
-    },
     async submitForm(formName, tableName) {
       this[formName].data.created_at = new Date();
       try {
@@ -1499,28 +1396,6 @@ export default {
       await this.submitForm("guestForm", "guests");
       this.modal.address = false;
       this.modal.gift = true;
-    },
-    selectText(element) {
-      let range;
-      if (document.selection) {
-        // IE
-        range = document.body.createTextRange();
-        range.moveToElementText(element);
-        range.select();
-      } else if (window.getSelection) {
-        range = document.createRange();
-        range.selectNode(element);
-        window.getSelection().removeAllRanges();
-        window.getSelection().addRange(range);
-      }
-    },
-    copyToClipboard(ref) {
-      this.selectText(this.$refs[ref]);
-      document.execCommand("copy");
-      this.copyNotification[ref] = true;
-      setTimeout(() => {
-        this.copyNotification[ref] = false;
-      }, 1500);
     },
     scrollToTop() {
       window.scrollTo({ top: 0, behavior: "smooth" });
