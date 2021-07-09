@@ -509,25 +509,10 @@
               Jl. Araya Megah No. 9, Pandanwangi Kec. Blimbing, Kota Malang
             </p>
 
-            <button
-              class="
-                py-2
-                px-4
-                bg-red-900
-                text-white
-                font-bold
-                transform
-                hover:scale-105
-                transition-all
-              "
-              @click="
-                openInNewTab(
-                  'https://www.google.com/maps/place/Taman+Indie/@-7.939455,112.6646045,15z/data=!4m5!3m4!1s0x0:0x7234a042cc61972f!8m2!3d-7.939455!4d112.6646045'
-                )
-              "
-            >
-              VIEW LOCATION
-            </button>
+            <Button
+              label="view location"
+              @click="openInNewTab(TAMAN_INDIE_LOC_URL)"
+            />
           </div>
 
           <div
@@ -571,25 +556,10 @@
               Sleman, DIY
             </p>
 
-            <button
-              class="
-                py-2
-                px-4
-                bg-red-900
-                text-white
-                font-bold
-                transform
-                hover:scale-105
-                transition-all
-              "
-              @click="
-                openInNewTab(
-                  'https://www.google.com/maps/place/INDOLUXE+HOTEL+JOGJAKARTA/@-7.7502299,110.3702439,17z/data=!3m1!4b1!4m8!3m7!1s0x2e7a59948461ea05:0x6215750c0500c63e!5m2!4m1!1i2!8m2!3d-7.7502299!4d110.3724326'
-                )
-              "
-            >
-              VIEW LOCATION
-            </button>
+            <Button
+              label="view_location"
+              @click="openInNewTab(INDOLUXE_LOC_URL)"
+            />
           </div>
         </div>
 
@@ -807,21 +777,10 @@
 
           <p class="md:text-xl">July 17 &#38; 24, 2021 at time of event</p>
 
-          <button
-            class="
-              py-2
-              px-4
-              bg-red-900
-              text-white
-              font-bold
-              transform
-              hover:scale-105
-              transition-all
-            "
+          <Button
+            label="join live streaming"
             @click="openInNewTab('https://www.instagram.com/sakinahhbb/')"
-          >
-            JOIN LIVE STREAMING
-          </button>
+          />
         </div>
       </div>
     </section>
@@ -1127,21 +1086,7 @@
         </p>
 
         <div class="w-full grid sm:block">
-          <button
-            @click="modal.address = !modal.address"
-            class="
-              py-2
-              px-4
-              bg-red-900
-              text-white
-              font-bold
-              transform
-              hover:scale-105
-              transition-all
-            "
-          >
-            SHOW ME
-          </button>
+          <Button label="show_me" @click="modal.address = !modal.address" />
         </div>
       </div>
     </section>
@@ -1181,6 +1126,7 @@
 </template>
 
 <script>
+import Button from "@/components/Button.vue";
 import CountdownCard from "@/components/CountdownCard.vue";
 import EmoneyCard from "@/components/EmoneyCard.vue";
 import ImageContainer from "@/components/ImageContainer.vue";
@@ -1195,7 +1141,14 @@ dayjs.extend(relativeTime);
 
 export default {
   name: "Home",
-  components: { CountdownCard, EmoneyCard, ImageContainer, Modal, Navbar },
+  components: {
+    Button,
+    CountdownCard,
+    EmoneyCard,
+    ImageContainer,
+    Modal,
+    Navbar,
+  },
   mixins: [mixin],
   data() {
     return {
@@ -1241,6 +1194,10 @@ export default {
       showCopiedNotification: false,
       scrollY: 0,
       scrollTimer: 0,
+      TAMAN_INDIE_LOC_URL:
+        "https://www.google.com/maps/place/Taman+Indie/@-7.939455,112.6646045,15z/data=!4m5!3m4!1s0x0:0x7234a042cc61972f!8m2!3d-7.939455!4d112.6646045",
+      INDOLUXE_LOC_URL:
+        "https://www.google.com/maps/place/INDOLUXE+HOTEL+JOGJAKARTA/@-7.7502299,110.3702439,17z/data=!3m1!4b1!4m8!3m7!1s0x2e7a59948461ea05:0x6215750c0500c63e!5m2!4m1!1i2!8m2!3d-7.7502299!4d110.3724326",
     };
   },
   computed: {
