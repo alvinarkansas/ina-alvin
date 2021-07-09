@@ -35,7 +35,7 @@
     </transition>
 
     <div class="w-full jumbotron">
-      <modal v-model="modal.address">
+      <Modal v-model="modal.address">
         <section
           class="
             modal-md
@@ -165,9 +165,9 @@
             </form>
           </main>
         </section>
-      </modal>
+      </Modal>
 
-      <modal v-model="modal.gift">
+      <Modal v-model="modal.gift">
         <section
           class="
             modal-lg
@@ -361,74 +361,9 @@
             </div>
           </main>
         </section>
-      </modal>
-      <nav
-        class="
-          grid grid-cols-3
-          py-4
-          sm:py-6
-          px-8
-          md:px-32
-          opacity-60
-          text-gray-700
-          sm:font-medium
-          text-sm
-          md:text-lg
-        "
-      >
-        <div id="logo" class="col-span-1 flex items-center">
-          <img
-            class="w-4 md:w-12"
-            src="../assets/logo/logo-black.png"
-            alt="logo"
-          />
-        </div>
-        <div
-          id="menu"
-          class="
-            col-span-2
-            grid grid-flow-col
-            auto-cols-max
-            gap-2
-            sm:gap-6
-            place-self-end
-          "
-        >
-          <a
-            href="#invitation"
-            class="
-              hover:text-yellow-800
-              transform
-              hover:scale-110
-              transition-all
-            "
-          >
-            INVITATION
-          </a>
-          <a
-            href="#gallery"
-            class="
-              hover:text-yellow-800
-              transform
-              hover:scale-110
-              transition-all
-            "
-          >
-            GALLERY
-          </a>
-          <a
-            href="#wishes"
-            class="
-              hover:text-yellow-800
-              transform
-              hover:scale-110
-              transition-all
-            "
-          >
-            WISHES
-          </a>
-        </div>
-      </nav>
+      </Modal>
+
+      <Navbar />
 
       <section class="batik-deco">
         <section
@@ -1345,6 +1280,7 @@
 import CountdownCard from "@/components/CountdownCard.vue";
 import ImageContainer from "@/components/ImageContainer.vue";
 import Modal from "@/components/Modal.vue";
+import Navbar from "@/components/Navbar.vue";
 import mixin from "@/mixin";
 import axios from "axios";
 import dayjs from "dayjs";
@@ -1354,7 +1290,7 @@ dayjs.extend(relativeTime);
 
 export default {
   name: "Home",
-  components: { CountdownCard, ImageContainer, Modal },
+  components: { CountdownCard, ImageContainer, Modal, Navbar },
   mixins: [mixin],
   data() {
     return {
@@ -1500,13 +1436,6 @@ export default {
           this.swipe.prevTranslate + currentPosition - this.swipe.startPos;
       }
     },
-    preventContextMenu() {
-      window.oncontextmenu = (event) => {
-        event.preventDefault();
-        event.stopPropagation();
-        return false;
-      };
-    },
     openInNewTab(url) {
       window.open(url, "_blank");
     },
@@ -1609,7 +1538,6 @@ export default {
     this.countdown();
     window.addEventListener("scroll", this.handleScroll);
     await this.getWishes();
-    this.preventContextMenu();
   },
 };
 </script>
