@@ -37,19 +37,19 @@
         href="#invitation"
         class="hover:text-yellow-800 transform hover:scale-110 transition-all"
       >
-        INVITATION
+        {{ t("navbar.invitation") }}
       </a>
       <a
         href="#gallery"
         class="hover:text-yellow-800 transform hover:scale-110 transition-all"
       >
-        GALLERY
+        {{ t("navbar.gallery") }}
       </a>
       <a
         href="#wishes"
         class="hover:text-yellow-800 transform hover:scale-110 transition-all"
       >
-        WISHES
+        {{ t("navbar.wishes") }}
       </a>
     </div>
   </nav>
@@ -57,6 +57,7 @@
 
 <script>
 import mixin from "@/mixin";
+
 export default {
   name: "Navbar",
   mixins: [mixin],

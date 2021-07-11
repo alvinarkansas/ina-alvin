@@ -34,7 +34,7 @@
         </svg>
       </p>
       <p v-else class="bg-red-900 text-white px-2 font-bold text-base">
-        copied to clipboard
+        {{ t("clipboard_msg") }}
       </p>
     </div>
   </div>

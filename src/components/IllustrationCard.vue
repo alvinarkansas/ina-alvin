@@ -7,12 +7,13 @@
       width="96"
       height="96"
     />
-    <p class="text-center">{{ label }}</p>
+    <p class="text-center">{{ t(label) }}</p>
   </div>
 </template>
 
 <script>
 import mixin from "@/mixin";
+
 export default {
   name: "IllustrationCard",
   mixins: [mixin],

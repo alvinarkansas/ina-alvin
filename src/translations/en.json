@@ -1,0 +1,74 @@
+{
+  "navbar": {
+    "invitation": "INVITATION",
+    "gallery": "GALLERY",
+    "wishes": "WISHES"
+  },
+  "countdown": {
+    "days": "DAYS",
+    "hours": "HOURS",
+    "minutes": "MINUTES",
+    "seconds": "SECONDS"
+  },
+  "subtitle": "UNTIL THE WEDDING OF",
+  "surah": "And one of His signs is that He created mates for you from yourselves that you may find rest in them, and He put between you love and compassion; most surely there are signs in this for a people who reflect.",
+  "the_wedding_of": "The wedding of",
+  "daughter_of": "daughter of",
+  "son_of": "son of",
+  "will_be_held_on": "Will be held on",
+  "invitation": {
+    "malang_date": "July 17, 2021",
+    "jogja_date": "July 24, 2021",
+    "session": "Session"
+  },
+  "postponed": "postponed",
+  "button": {
+    "view_location": "view location",
+    "join": "join live streaming",
+    "show_me": "show me"
+  },
+  "protocol_prologue": "As an effort to break the chain of COVID-19 transmission, we will apply these safety protocol at our future wedding ceremony",
+  "protocol": {
+    "temperature_check": "Temperature Check",
+    "no_handshake": "No Handshake",
+    "physical_distancing": "Physical Distancing",
+    "maximum_capacity": "Maximum Capacity",
+    "handwash": "Wash Hands Regularly",
+    "mask": "Wear Masks"
+  },
+  "protocol_warning": "all guests and invitees should pay attention and obey the applied health protocol",
+  "sad_announcement": "And due to COVID-19, we are sad to announce that we are unable to invite every single one of our beloved friends to the wedding ceremony.",
+  "attendance_limit": "The wedding ceremony will be limited to those who receive our offline invitation",
+  "live_streaming_prologue": "However, to still be able to share our happiness, we decided to host a virtual live video ceremony for those who don't receive our invitation letter. We hope you will be joining us via our instagram live for this happy occasion.",
+  "live_streaming_time": "July 17, 2021 at time of event",
+  "on_instagram": "on instagram",
+  "wishes_prologue": "Yes, you can still send us wishes! Make sure you write down your name so that all of us can recognize you easily ^_^",
+  "wishes_form": {
+    "name_label": "Name",
+    "wishes_label": "Wishes for Ina & Alvin",
+    "success_message": "Thank you",
+    "error_message": "Something went wrong",
+    "submit_button": "SEND WISHES",
+    "loading_label": "SENDING..."
+  },
+  "swipe_label": "Swipe to see more",
+  "gift_prologue": "We also accept good intention in any form. Should you wish to send us gifts, you can send them to this address.",
+  "guest_form": {
+    "title": "YOU'RE GETTING CLOSER",
+    "subtitle": "Please let us know your name, phone number, and address before weshow you ours",
+    "name_label": "Name",
+    "phone_label": "Phone Number",
+    "address_label": "Full Address",
+    "success_message": "Thank you",
+    "error_message": "Something went wrong",
+    "submit_button": "CONTINUE",
+    "loading_label": "SUBMITTING..."
+  },
+  "gift_form": {
+    "title": "THANK YOU",
+    "address_prologue": "Our plan was to live in Jakarta after we are married. But COVID hits us --well, everyone actually-- hard. Given the circumstances, we will be staying in Jogja at the moment. Should you wish to send us gifts, you can send them to this address.",
+    "emoney_prologue": "Or if you’re into electronic money, we accept these methods"
+  },
+  "clipboard_msg": "copied to clipboard",
+  "footer": "Photos & videos by"
+}
