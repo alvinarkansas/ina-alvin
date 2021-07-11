@@ -1,0 +1,74 @@
+{
+  "navbar": {
+    "invitation": "UNDANGAN",
+    "gallery": "FOTO",
+    "wishes": "UCAPAN"
+  },
+  "countdown": {
+    "days": "HARI",
+    "hours": "JAM",
+    "minutes": "MENIT",
+    "seconds": "DETIK"
+  },
+  "subtitle": "MENUJU PERNIKAHAN",
+  "surah": "Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu istri-istri dari jenismu sendiri, supaya kamu cenderung dan merasa tentram kepadanya, dan dijadikan-Nya di antaramu rasa kasih dan sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda bagi kaum yang berfikir",
+  "the_wedding_of": "Pernikahan",
+  "daughter_of": "Putri ketiga dari",
+  "son_of": "Putra dari",
+  "will_be_held_on": "Akan diselenggarakan",
+  "invitation": {
+    "malang_date": "17 Juli 2021",
+    "jogja_date": "24 Juli, 2021",
+    "session": "Sesi"
+  },
+  "postponed": "ditunda",
+  "button": {
+    "view_location": "lihat lokasi",
+    "join": "ikuti live streaming",
+    "show_me": "tunjukkan alamat"
+  },
+  "protocol_prologue": "Sebagai upaya memutus mata rantai penularan COVID-19, protokol keselamatan ini akan kami terapkan pada acara pernikahan kami nanti",
+  "protocol": {
+    "temperature_check": "Pengecekan Suhu Badan",
+    "no_handshake": "Hindari Bersalaman",
+    "physical_distancing": "Menjaga Jarak",
+    "maximum_capacity": "Kapasitas Maksimum",
+    "handwash": "Mencuci Tangan",
+    "mask": "Memakai Masker"
+  },
+  "protocol_warning": "semua tamu undangan wajib memperhatikan dan menaati protokol yang berlaku",
+  "sad_announcement": "Karena kita semua tengah berada di situasi pandemi COVID-19, sangat disayangkan kami tidak dapat mengundang semua teman terkasih kami ke upacara pernikahan kami.",
+  "attendance_limit": "Upacara pernikahan kami hanya dapat dihadiri oleh penerima surat undangan offline dari kami",
+  "live_streaming_prologue": "Namun, demi tetap dapat berbagi kebahagiaan, semua dapat menghadiri upacara pernikahan kami secara maya melalui live streaming baik prosesi akad maupun resepsi. Kami persilakan untuk bergabung pada",
+  "live_streaming_time": "17 Juli 2021",
+  "on_instagram": "di instagram",
+  "wishes_prologue": "Tenang, masih bisa kirim doa & ucapan kok. Pastikan untuk mencantumkan nama yah, supaya semua bisa tau pengirimnya ^_^",
+  "wishes_form": {
+    "name_label": "Nama",
+    "wishes_label": "Ucapan untuk Ina & Alvin",
+    "success_message": "Terima Kasih",
+    "error_message": "Gagal, coba kirim ulang",
+    "submit_button": "KIRIM",
+    "loading_label": "MENGIRIM..."
+  },
+  "swipe_label": "Geser untuk lihat lebih banyak",
+  "gift_prologue": "Kami juga menerima niat baik dalam wujud apapun. Jadi apabila ingin mengirimkan hadiah, kado, atau apapun itu silahkan kirim di alamat ini yah ^_^",
+  "guest_form": {
+    "title": "BAIK, TAPI TUNGGU SEBENTAR",
+    "subtitle": "Sebelum itu, mohon beritahu kami nama, nomor telepon, dan alamat lengkap terlebih dahulu yah. Terimakasih sebelumnya ^_^",
+    "name_label": "Nama",
+    "phone_label": "Nomor Telepon",
+    "address_label": "Alamat Lengkap",
+    "success_message": "Terima Kasih",
+    "error_message": "Gagal, coba kirim ulang",
+    "submit_button": "LANJUTKAN",
+    "loading_label": "MENGIRIM..."
+  },
+  "gift_form": {
+    "title": "TERIMA KASIH",
+    "address_prologue": "Kami berencana untuk tinggal di Jakarta setelah melangsungkan pernikahan. Tapi dikarenakan PPKM Darurat, untuk sementara kami akan tinggal di Jogja. Apabila ingin mengirimkan hadiah, kado, atau apapun itu kami akan sangat berterimakasih jika dikirim ke alamat ini",
+    "emoney_prologue": "Layaknya pernikahan-pernikahan modern, kami juga menerima metode metode seperti di bawah ini"
+  },
+  "clipboard_msg": "tersalin",
+  "footer": "Foto & video oleh"
+}

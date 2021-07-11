@@ -74,28 +74,31 @@
           </button>
           <main class="grid gap-6 font-cormorant-sc">
             <p class="py-1 md:text-xl font-semibold font-cormorant-uprignt">
-              YOU'RE GETTING CLOSER!
+              {{ t("guest_form.title") }}
             </p>
 
             <p class="text-left">
-              Please let us know your name, phone number, and address before we
-              show you ours
+              {{ t("guest_form.subtitle") }}
             </p>
 
             <form @submit.prevent="showGiftInfo" class="grid gap-4">
               <div class="grid gap-2">
-                <Input label="Name" v-model="guestForm.data.name" name="name" />
+                <Input
+                  :label="t('guest_form.name_label')"
+                  v-model="guestForm.data.name"
+                  name="name"
+                />
               </div>
               <div class="grid gap-2">
                 <Input
-                  label="Phone Number"
+                  :label="t('guest_form.phone_label')"
                   v-model="guestForm.data.phone"
                   name="phone"
                 />
               </div>
               <div class="grid gap-2">
                 <Input
-                  label="Address"
+                  :label="t('guest_form.address_label')"
                   v-model="guestForm.data.address"
                   type="textarea"
                   name="address"
@@ -103,12 +106,12 @@
               </div>
               <transition name="slide">
                 <p v-if="guestForm.sent" class="text-green-600 font-semibold">
-                  Thank you
+                  {{ t("guest_form.success_message") }}
                 </p>
               </transition>
               <transition name="slide">
                 <p v-if="guestForm.error" class="text-red-600 font-semibold">
-                  Something went wrong
+                  {{ t("guest_form.error_message") }}
                 </p>
               </transition>
               <div class="w-full grid sm:block sm:text-right">
@@ -128,7 +131,11 @@
                       : 'bg-red-900 transform hover:scale-105 transition-all'
                   "
                 >
-                  {{ !guestForm.loading ? "CONTINUE" : "SUBMITTING..." }}
+                  {{
+                    !guestForm.loading
+                      ? `${t("guest_form.submit_button")}`
+                      : `${t("guest_form.loading_label")}`
+                  }}
                 </button>
               </div>
             </form>
@@ -183,15 +190,10 @@
                 uppercase
               "
             >
-              THANK YOU, {{ userName }}!
+              {{ `${t("gift_form.title")}, ${userName}` }}!
             </p>
 
-            <p>
-              Our plan was to live in Jakarta after we are married. But COVID
-              hits us --well, everyone actually-- hard. Given the circumstances,
-              we will be staying in Jogja at the moment. Should you wish to send
-              us gifts, you can send them to this address.
-            </p>
+            <p>{{ t("gift_form.address_prologue") }}</p>
 
             <div class="w-1/3 divide-y divide-grey-4">
               <p></p>
@@ -208,7 +210,7 @@
               <p></p>
             </div>
 
-            <p>Or if you’re into electronic money, we accept these methods</p>
+            <p>{{ t("gift_form.emoney_prologue") }}</p>
 
             <div class="grid gap-8 md:grid-cols-3 md:gap-6 lg:gap-16">
               <EmoneyCard
@@ -254,15 +256,15 @@
             grad-trans-linen-trans
           "
         >
-          <CountdownCard :value="days" unit="DAYS" />
-          <CountdownCard :value="hours" unit="HOURS" />
-          <CountdownCard :value="minutes" unit="MINUTES" />
-          <CountdownCard :value="seconds" unit="SECONDS" />
+          <CountdownCard :value="days" :unit="t('countdown.days')" />
+          <CountdownCard :value="hours" :unit="t('countdown.hours')" />
+          <CountdownCard :value="minutes" :unit="t('countdown.minutes')" />
+          <CountdownCard :value="seconds" :unit="t('countdown.seconds')" />
         </section>
       </section>
 
       <section class="py-8 md:py-24 text-gray-700 grid gap-4">
-        <p class="text-xs sm:text-sm md:text-lg">UNTIL THE WEDDING OF</p>
+        <p class="text-xs sm:text-sm md:text-lg">{{ t("subtitle") }}</p>
         <p class="text-4xl sm:text-7xl md:text-9xl">INA &#38; ALVIN</p>
       </section>
     </div>
@@ -299,13 +301,7 @@
             alt="ICON"
             class="w-6 md:w-8"
           />
-          <p class="text-center">
-            Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan
-            untukmu istri-istri dari jenismu sendiri, supaya kamu cenderung dan
-            merasa tentram kepadanya, dan dijadikan-Nya di antaramu rasa kasih
-            dan sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat
-            tanda-tanda bagi kaum yang berfikir
-          </p>
+          <p class="text-center">{{ t("surah") }}</p>
           <p>(QS Ar-Rum 21)</p>
         </div>
 
@@ -314,7 +310,7 @@
           <p></p>
         </div>
 
-        <p class="md:text-xl">Pernikahan</p>
+        <p class="md:text-xl">{{ t("the_wedding_of") }}</p>
 
         <div
           class="
@@ -368,7 +364,7 @@
               </a>
             </div>
             <p class="font-bold">NURUS SAKINAH <br />(INA)</p>
-            <p>Putri ketiga dari</p>
+            <p>{{ t("daughter_of") }}</p>
             <p>Bp. Ucok Chabib &#38; Ibu Nurul Fachriyah</p>
           </div>
 
@@ -419,12 +415,70 @@
               ALVIN ARKANSAS <br class="hidden sm:block" />HANYOKROKUSUMO
               <br class="sm:hidden" />(ALVIN)
             </p>
-            <p>Putra dari</p>
+            <p>{{ t("son_of") }}</p>
             <p>Bp. Agung Fitri Awan &#38; Ibu Tiwi Hariyantini</p>
           </div>
         </div>
 
-        <p class="md:text-xl">Akan diselenggarakan pada</p>
+        <p class="md:text-xl">{{ t("will_be_held_on") }}</p>
+
+        <div
+          class="
+            w-full
+            grid
+            place-items-center
+            gap-4
+            md:gap-16
+            md:px-32
+            md:text-lg
+          "
+        >
+          <div
+            class="
+              w-full
+              md:w-2/3
+              bg-linen bg-opacity-50
+              grid
+              gap-4
+              place-items-center
+              px-4
+              md:px-12
+              py-12
+            "
+          >
+            <img
+              src="../assets/deco/batik-deco-small-1.png"
+              class="w-6 md:w-8"
+              alt="ICON"
+            />
+
+            <div
+              class="grid grid-flow-col gap-4 auto-cols-max place-items-center"
+            >
+              <img src="../assets/deco/batik-deco-small-3.png" alt="\" />
+              <p class="font-medium md:text-2xl">AKAD</p>
+              <img src="../assets/deco/batik-deco-small-4.png" alt="/" />
+            </div>
+
+            <p class="font-medium md:text-2xl">
+              <template v-if="$i18n.locale === 'id'">
+                <span class="font-gilda">17 </span>
+                <span>JULI </span>
+              </template>
+              <template v-else>
+                <span>JULY </span>
+                <span class="font-gilda">17, </span>
+              </template>
+              <span class="font-gilda">2021 10.00 </span>
+              <span>WIB</span>
+            </p>
+
+            <p class="text-gray-500">
+              Jl. Raya Kembang, Krajan, Candirenggo, Kec. Singosari, Malang,
+              Jawa Timur 65153
+            </p>
+          </div>
+        </div>
 
         <div
           class="
@@ -446,42 +500,64 @@
               px-4
               md:px-12
               py-12
+              postponed
+              relative
             "
           >
             <img
-              src="../assets/deco/batik-deco-small-1.png"
-              class="w-6 md:w-8"
+              src="../assets/deco/batik-deco-small-2.png"
+              class="w-6 md:w-8 opacity-20"
               alt="ICON"
             />
 
             <div
               class="grid grid-flow-col gap-4 auto-cols-max place-items-center"
             >
-              <img src="../assets/deco/batik-deco-small-3.png" alt="\" />
+              <img
+                src="../assets/deco/batik-deco-small-3.png"
+                class="opacity-20"
+                alt="\"
+              />
               <p class="font-medium md:text-2xl">
-                AKAD &#38; RESEPSI
+                RESEPSI
                 <span class="font-gilda font-medium md:text-2xl">1</span>
               </p>
-              <img src="../assets/deco/batik-deco-small-4.png" alt="/" />
+              <img
+                src="../assets/deco/batik-deco-small-4.png"
+                class="opacity-20"
+                alt="/"
+              />
             </div>
 
-            <p>17 Juli 2021</p>
+            <p>{{ t("invitation.malang_date") }}</p>
 
             <div>
-              <p>Sesi 1: 16.00 WIB</p>
-              <p>Sesi 2: 18.30 WIB</p>
+              <p>{{ t("invitation.session") }} 1: 16.00 WIB</p>
+              <p>{{ t("invitation.session") }} 2: 18.30 WIB</p>
             </div>
 
             <p>Taman Indie Resto</p>
 
-            <p class="text-gray-500">
-              Jl. Araya Megah No. 9, Pandanwangi Kec. Blimbing, Kota Malang
-            </p>
+            <p>Jl. Araya Megah No. 9, Pandanwangi Kec. Blimbing, Kota Malang</p>
 
-            <Button
-              label="view location"
-              @click="openInNewTab(TAMAN_INDIE_LOC_URL)"
-            />
+            <span
+              class="
+                w-full
+                py-16
+                px-2
+                text-xl text-red-900
+                md:text-2xl
+                bg-linen-dark bg-opacity-40
+                font-bold
+                absolute
+                top-1/2
+                left-1/2
+                transform
+                -translate-x-1/2 -translate-y-1/2
+              "
+            >
+              {{ t("postponed") }}
+            </span>
           </div>
 
           <div
@@ -492,23 +568,33 @@
               place-items-center
               px-4
               py-12
+              postponed
+              relative
             "
           >
             <img
               src="../assets/deco/batik-deco-small-2.png"
-              class="w-6 md:w-8"
+              class="w-6 md:w-8 opacity-20"
               alt="ICON"
             />
 
             <div
               class="grid grid-flow-col gap-4 auto-cols-max place-items-center"
             >
-              <img src="../assets/deco/batik-deco-small-3.png" alt="\" />
+              <img
+                src="../assets/deco/batik-deco-small-3.png"
+                class="opacity-20"
+                alt="\"
+              />
               <p class="font-medium md:text-2xl">
                 RESEPSI
                 <span class="font-gilda font-medium md:text-2xl">2</span>
               </p>
-              <img src="../assets/deco/batik-deco-small-4.png" alt="/" />
+              <img
+                src="../assets/deco/batik-deco-small-4.png"
+                class="opacity-20"
+                alt="/"
+              />
             </div>
 
             <p>24 Juli 2021</p>
@@ -520,79 +606,83 @@
 
             <p>Hotel Indoluxe Yogyakarta</p>
 
-            <p class="text-gray-500">
+            <p>
               Jl. Palagan Tentara Pelajar No.106, Sariharjo, Kec. Ngaglik,
               Sleman, DIY
             </p>
 
-            <Button
-              label="view_location"
-              @click="openInNewTab(INDOLUXE_LOC_URL)"
-            />
+            <span
+              class="
+                w-full
+                py-16
+                px-2
+                text-xl text-red-900
+                md:text-2xl
+                bg-linen-dark bg-opacity-40
+                font-bold
+                absolute
+                top-1/2
+                left-1/2
+                transform
+                -translate-x-1/2 -translate-y-1/2
+              "
+            >
+              {{ t("postponed") }}
+            </span>
           </div>
         </div>
 
         <p class="md:text-lg md:w-1/2">
-          As an effort to break the chain of COVID-19 transmission, we will
-          apply these safety protocol at our future wedding ceremony
+          {{ t("protocol_prologue") }}
         </p>
 
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-24">
-          <div class="grid md:gap-2 place-items-center">
-            <img
-              src="../assets/illustrations/illustration-thermo.png"
-              alt="TEMPERATURE"
-              class="h-32 w-32"
-            />
-            <p class="text-center">Temperature Check</p>
-          </div>
-          <div class="grid md:gap-2 place-items-center">
-            <img
-              src="../assets/illustrations/illustration-no-handshake.png"
-              alt="HANDSHAKE"
-              class="h-32 w-32"
-            />
-            <p class="text-center">No Handshake</p>
-          </div>
-          <div class="grid md:gap-2 place-items-center">
-            <img
-              src="../assets/illustrations/illustration-distancing.png"
-              alt="DISTANCING"
-              class="h-32 w-32"
-            />
-            <p class="text-center">Physical Distancing</p>
-          </div>
-          <div class="grid md:gap-2 place-items-center">
-            <img
-              src="../assets/illustrations/illustration-max.png"
-              alt="CAPACITY"
-              class="h-32 w-32"
-            />
-            <p class="text-center">Maximum Capacity</p>
-          </div>
+        <div class="grid grid-cols-2 lg:grid-cols-3 gap-6 md:gap-24">
+          <IllustrationCard
+            name="thermo"
+            alt="TEMPERATURE"
+            label="protocol.temperature_check"
+          />
+          <IllustrationCard
+            name="no-handshake"
+            alt="HANDSHAKE"
+            label="protocol.no_handshake"
+          />
+          <IllustrationCard
+            name="distancing"
+            alt="DISTANCING"
+            label="protocol.physical_distancing"
+          />
+          <IllustrationCard
+            name="max"
+            alt="CAPACITY"
+            label="protocol.maximum_capacity"
+          />
+          <IllustrationCard
+            name="wear-mask"
+            alt="WEAR-MASK"
+            label="protocol.mask"
+          />
+          <IllustrationCard
+            name="hygiene-wash"
+            alt="WASH"
+            label="protocol.handwash"
+          />
         </div>
 
         <p class="md:text-lg w-3/4 md:w-1/2">
-          all guests and invitees should pay attention and obey the applied
-          health protocol
+          {{ t("protocol_warning") }}
         </p>
 
         <p class="md:text-lg w-3/4 md:w-1/2">
-          And due to COVID-19, we are sad to announce that we are unable to
-          invite every single one of our beloved friends to the wedding
-          ceremony.
+          {{ t("sad_announcement") }}
         </p>
 
         <p class="font-semibold md:text-lg w-3/4 md:w-1/2">
-          The wedding ceremony will be limited to those who receive our offline
-          invitation
+          {{ t("attendance_limit") }}
         </p>
 
         <p class="md:text-lg w-3/4 md:w-1/2">
-          However, to still be able to share our happiness, we decided to host a
-          virtual live video ceremony for those who don't receive our invitation
-          letter. We hope you will be joining us via our instagram live for this
-          happy occasion.
+          {{ t("live_streaming_prologue") }}
         </p>
 
         <div
@@ -623,7 +713,7 @@
             <img src="../assets/deco/batik-deco-small-4.png" alt="/" />
           </div>
 
-          <p class="md:text-xl">on instagram</p>
+          <p class="md:text-xl">{{ t("on_instagram") }}</p>
 
           <div class="grid grid-cols-2 place-items-center gap-x-8 gap-y-6">
             <div
@@ -744,10 +834,10 @@
             <p class="md:text-lg font-cormorant-infant">@alvinarkansas</p>
           </div>
 
-          <p class="md:text-xl">July 17 &#38; 24, 2021 at time of event</p>
+          <p class="md:text-xl">{{ t("live_streaming_time") }}</p>
 
           <Button
-            label="join live streaming"
+            :label="t('button.join')"
             @click="openInNewTab('https://www.instagram.com/sakinahhbb/')"
           />
         </div>
@@ -756,7 +846,7 @@
 
     <section id="gallery" class="py-8 px-4">
       <div class="w-full grid gap-6 mb-4">
-        <p class="md:text-xl font-semibold">GALLERY</p>
+        <p class="md:text-xl font-semibold">{{ t("navbar.gallery") }}</p>
         <div class="grid gap-4 md:grid-cols-3 place-items-start min-h-screen">
           <div class="grid gap-4 min-w-full">
             <ImageContainer
@@ -857,10 +947,6 @@
         </div>
       </div>
       <div class="w-full grid place-items-center">
-        <!-- <iframe
-          src="https://drive.google.com/file/d/1-4IKAjpWqCcYfCcmfg6rYKCiiGTIcPeu/preview"
-          class="w-full video-frame"
-        > -->
         <iframe
           class="w-full video-frame"
           src="https://www.youtube.com/embed/2GslXyNE0z8?modestbranding=1&rel=0"
@@ -875,24 +961,25 @@
 
     <section id="wishes" class="py-8 mb-32 font-cormorant-sc overflow-x-hidden">
       <div class="w-full px-4 md:w-1/3 grid gap-6 md:text-lg mb-16 mx-auto">
-        <p class="md:text-xl font-semibold font-cormorant-uprignt">WISHES</p>
+        <p class="md:text-xl font-semibold font-cormorant-uprignt">
+          {{ t("navbar.wishes") }}
+        </p>
 
         <p class="text-left">
-          Yes, you can still send us wishes! Make sure you write down your name
-          so that we can recognize you easily ^_^
+          {{ t("wishes_prologue") }}
         </p>
 
         <form @submit.prevent="sendWishes" class="grid gap-4">
           <div class="grid gap-2">
             <Input
-              label="Name"
+              :label="t('wishes_form.name_label')"
               v-model="wishesForm.data.name"
               name="wishes_name"
             />
           </div>
           <div class="grid gap-2">
             <Input
-              label="Wishes for Ina & Alvin"
+              :label="t('wishes_form.wishes_label')"
               v-model="wishesForm.data.wishes"
               type="textarea"
               name="wishes_wishes"
@@ -900,12 +987,12 @@
           </div>
           <transition name="slide">
             <p v-if="wishesForm.sent" class="text-green-600 font-semibold">
-              Thank you
+              {{ t("wishes_form.success_message") }}
             </p>
           </transition>
           <transition name="slide">
             <p v-if="wishesForm.error" class="text-red-600 font-semibold">
-              Something went wrong
+              {{ t("wishes_form.error_message") }}
             </p>
           </transition>
           <div class="w-full grid sm:block sm:text-right">
@@ -919,7 +1006,11 @@
                   : 'bg-red-900 transform hover:scale-105 transition-all'
               "
             >
-              {{ !wishesForm.loading ? "SEND WISHES" : "SENDING..." }}
+              {{
+                !wishesForm.loading
+                  ? `${t("wishes_form.submit_button")}`
+                  : `${t("wishes_form.loading_label")}`
+              }}
             </button>
           </div>
         </form>
@@ -948,7 +1039,7 @@
           </div>
         </div>
         <p v-if="!swipe.done" class="text-base animate-bounce mb-16">
-          Swipe to see more >
+          {{ t("swipe_label") }} >
         </p>
       </template>
       <template v-else>
@@ -1031,48 +1122,18 @@
           class="h-32 w-32"
         />
 
-        <p>
-          We also accept good intention in any form. Should you wish to send us
-          gifts, you can send them to this address.
-        </p>
+        <p>{{ t("gift_prologue") }}</p>
 
         <div class="w-full grid sm:block">
-          <Button label="show_me" @click="modal.address = !modal.address" />
+          <Button
+            :label="t('button.show_me')"
+            @click="modal.address = !modal.address"
+          />
         </div>
       </div>
     </section>
 
-    <footer class="p-8 md:p-16 grid gap-2 bg-linen font-cormorant-sc">
-      <div
-        class="
-          grid grid-flow-col
-          gap-1
-          auto-cols-max
-          items-center
-          justify-center
-        "
-      >
-        <span> Photos by </span>
-        <a
-          class="transform hover:scale-105 hover:text-red-800 transition-all"
-          href="https://www.instagram.com/ameltrias.moments/"
-          target="_blank"
-        >
-          Ameltrias
-        </a>
-        <span> &#38; </span>
-        <a
-          class="transform hover:scale-105 hover:text-red-800 transition-all"
-          href="https://www.instagram.com/_stagedoc/"
-          target="_blank"
-        >
-          Stagedoc
-        </a>
-      </div>
-      <p @click="scrollToTop" class="text-gray-400">
-        alvinarkansas &#169; 2021
-      </p>
-    </footer>
+    <Footer />
   </div>
 </template>
 
@@ -1080,6 +1141,8 @@
 import Button from "@/components/Button.vue";
 import CountdownCard from "@/components/CountdownCard.vue";
 import EmoneyCard from "@/components/EmoneyCard.vue";
+import Footer from "@/components/Footer.vue";
+import IllustrationCard from "@/components/IllustrationCard.vue";
 import ImageContainer from "@/components/ImageContainer.vue";
 import Modal from "@/components/Modal.vue";
 import Input from "@/components/Input.vue";
@@ -1088,6 +1151,7 @@ import mixin from "@/mixin";
 import axios from "axios";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
+import "dayjs/locale/id";
 
 dayjs.extend(relativeTime);
 
@@ -1097,6 +1161,8 @@ export default {
     Button,
     CountdownCard,
     EmoneyCard,
+    Footer,
+    IllustrationCard,
     ImageContainer,
     Input,
     Modal,
@@ -1162,7 +1228,7 @@ export default {
     countdown() {
       const timer = setInterval(() => {
         const now = new Date().getTime();
-        const weddingDay = new Date("Jul 17, 2021 13:00:00").getTime();
+        const weddingDay = new Date("Jul 17, 2021 09:30:00").getTime();
         const distance = weddingDay - now;
 
         if (distance < 0) {
@@ -1266,7 +1332,9 @@ export default {
           this.wishes.push({
             id: key,
             ...data[key],
-            created_at: dayjs().to(dayjs(data[key].created_at)),
+            created_at: dayjs()
+              .locale(this.$i18n.locale)
+              .to(dayjs(data[key].created_at)),
           });
         });
         this.wishes.reverse();
@@ -1328,6 +1396,19 @@ export default {
 </script>
 
 <style scoped>
+.postponed::before {
+  content: "";
+  @apply absolute inset-0;
+  @apply grid place-items-center;
+  @apply text-red-600 text-2xl font-medium;
+}
+
+div.postponed {
+  @apply text-gray-400 text-opacity-70;
+  @apply bg-opacity-30;
+  @apply select-none;
+}
+
 .jumbotron {
   height: 720px;
   background-image: url("../assets/jumbotron-xs.png");

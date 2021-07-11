@@ -13,6 +13,7 @@
 
 <script>
 import mixin from "@/mixin";
+
 export default {
   name: "IllustrationCard",
   mixins: [mixin],
