@@ -430,15 +430,17 @@
           class="
             w-full
             grid
+            place-items-center
             gap-4
             md:gap-16
             md:px-32
-            md:grid-flow-col md:grid-cols-2
             md:text-lg
           "
         >
           <div
             class="
+              w-full
+              md:w-2/3
               bg-linen bg-opacity-50
               grid
               gap-4
@@ -458,11 +460,71 @@
               class="grid grid-flow-col gap-4 auto-cols-max place-items-center"
             >
               <img src="../assets/deco/batik-deco-small-3.png" alt="\" />
+              <p class="font-medium md:text-2xl">AKAD</p>
+              <img src="../assets/deco/batik-deco-small-4.png" alt="/" />
+            </div>
+
+            <p class="font-medium md:text-2xl">
+              <span class="font-gilda">17 </span>
+              <span>JULI </span>
+              <span class="font-gilda">2021 10.00 </span>
+              <span>WIB</span>
+            </p>
+
+            <p class="text-gray-500">
+              Jl. Raya Kembang, Krajan, Candirenggo, Kec. Singosari, Malang,
+              Jawa Timur 65153
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="
+            w-full
+            grid
+            gap-4
+            md:gap-16
+            md:px-32
+            md:grid-flow-col md:grid-cols-2
+            md:text-lg
+          "
+        >
+          <div
+            class="
+              bg-linen bg-opacity-50
+              grid
+              gap-4
+              place-items-center
+              px-4
+              md:px-12
+              py-12
+              postponed
+              relative
+            "
+          >
+            <img
+              src="../assets/deco/batik-deco-small-2.png"
+              class="w-6 md:w-8 opacity-20"
+              alt="ICON"
+            />
+
+            <div
+              class="grid grid-flow-col gap-4 auto-cols-max place-items-center"
+            >
+              <img
+                src="../assets/deco/batik-deco-small-3.png"
+                class="opacity-20"
+                alt="\"
+              />
               <p class="font-medium md:text-2xl">
-                AKAD &#38; RESEPSI
+                RESEPSI
                 <span class="font-gilda font-medium md:text-2xl">1</span>
               </p>
-              <img src="../assets/deco/batik-deco-small-4.png" alt="/" />
+              <img
+                src="../assets/deco/batik-deco-small-4.png"
+                class="opacity-20"
+                alt="/"
+              />
             </div>
 
             <p>17 Juli 2021</p>
@@ -474,14 +536,26 @@
 
             <p>Taman Indie Resto</p>
 
-            <p class="text-gray-500">
-              Jl. Araya Megah No. 9, Pandanwangi Kec. Blimbing, Kota Malang
-            </p>
+            <p>Jl. Araya Megah No. 9, Pandanwangi Kec. Blimbing, Kota Malang</p>
 
-            <Button
-              label="view location"
-              @click="openInNewTab(TAMAN_INDIE_LOC_URL)"
-            />
+            <span
+              class="
+                w-full
+                py-16
+                px-2
+                text-xl text-red-900
+                md:text-2xl
+                bg-linen-dark bg-opacity-40
+                font-bold
+                absolute
+                top-1/2
+                left-1/2
+                transform
+                -translate-x-1/2 -translate-y-1/2
+              "
+            >
+              postponed
+            </span>
           </div>
 
           <div
@@ -492,23 +566,33 @@
               place-items-center
               px-4
               py-12
+              postponed
+              relative
             "
           >
             <img
               src="../assets/deco/batik-deco-small-2.png"
-              class="w-6 md:w-8"
+              class="w-6 md:w-8 opacity-20"
               alt="ICON"
             />
 
             <div
               class="grid grid-flow-col gap-4 auto-cols-max place-items-center"
             >
-              <img src="../assets/deco/batik-deco-small-3.png" alt="\" />
+              <img
+                src="../assets/deco/batik-deco-small-3.png"
+                class="opacity-20"
+                alt="\"
+              />
               <p class="font-medium md:text-2xl">
                 RESEPSI
                 <span class="font-gilda font-medium md:text-2xl">2</span>
               </p>
-              <img src="../assets/deco/batik-deco-small-4.png" alt="/" />
+              <img
+                src="../assets/deco/batik-deco-small-4.png"
+                class="opacity-20"
+                alt="/"
+              />
             </div>
 
             <p>24 Juli 2021</p>
@@ -520,15 +604,29 @@
 
             <p>Hotel Indoluxe Yogyakarta</p>
 
-            <p class="text-gray-500">
+            <p>
               Jl. Palagan Tentara Pelajar No.106, Sariharjo, Kec. Ngaglik,
               Sleman, DIY
             </p>
 
-            <Button
-              label="view_location"
-              @click="openInNewTab(INDOLUXE_LOC_URL)"
-            />
+            <span
+              class="
+                w-full
+                py-16
+                px-2
+                text-xl text-red-900
+                md:text-2xl
+                bg-linen-dark bg-opacity-40
+                font-bold
+                absolute
+                top-1/2
+                left-1/2
+                transform
+                -translate-x-1/2 -translate-y-1/2
+              "
+            >
+              postponed
+            </span>
           </div>
         </div>
 
@@ -537,39 +635,37 @@
           apply these safety protocol at our future wedding ceremony
         </p>
 
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-24">
-          <div class="grid md:gap-2 place-items-center">
-            <img
-              src="../assets/illustrations/illustration-thermo.png"
-              alt="TEMPERATURE"
-              class="h-32 w-32"
-            />
-            <p class="text-center">Temperature Check</p>
-          </div>
-          <div class="grid md:gap-2 place-items-center">
-            <img
-              src="../assets/illustrations/illustration-no-handshake.png"
-              alt="HANDSHAKE"
-              class="h-32 w-32"
-            />
-            <p class="text-center">No Handshake</p>
-          </div>
-          <div class="grid md:gap-2 place-items-center">
-            <img
-              src="../assets/illustrations/illustration-distancing.png"
-              alt="DISTANCING"
-              class="h-32 w-32"
-            />
-            <p class="text-center">Physical Distancing</p>
-          </div>
-          <div class="grid md:gap-2 place-items-center">
-            <img
-              src="../assets/illustrations/illustration-max.png"
-              alt="CAPACITY"
-              class="h-32 w-32"
-            />
-            <p class="text-center">Maximum Capacity</p>
-          </div>
+        <div class="grid grid-cols-2 lg:grid-cols-3 gap-6 md:gap-24">
+          <IllustrationCard
+            name="thermo"
+            alt="TEMPERATURE"
+            label="Temperature Check"
+          />
+          <IllustrationCard
+            name="no-handshake"
+            alt="HANDSHAKE"
+            label="No Handshake"
+          />
+          <IllustrationCard
+            name="distancing"
+            alt="DISTANCING"
+            label="Physical Distancing"
+          />
+          <IllustrationCard
+            name="max"
+            alt="CAPACITY"
+            label="Maximum Capacity"
+          />
+          <IllustrationCard
+            name="wear-mask"
+            alt="WEAR-MASK"
+            label="Wash Hands Regularly"
+          />
+          <IllustrationCard
+            name="hygiene-wash"
+            alt="WASH"
+            label="Wear Masks"
+          />
         </div>
 
         <p class="md:text-lg w-3/4 md:w-1/2">
@@ -1080,6 +1176,7 @@
 import Button from "@/components/Button.vue";
 import CountdownCard from "@/components/CountdownCard.vue";
 import EmoneyCard from "@/components/EmoneyCard.vue";
+import IllustrationCard from "@/components/IllustrationCard.vue";
 import ImageContainer from "@/components/ImageContainer.vue";
 import Modal from "@/components/Modal.vue";
 import Input from "@/components/Input.vue";
@@ -1097,6 +1194,7 @@ export default {
     Button,
     CountdownCard,
     EmoneyCard,
+    IllustrationCard,
     ImageContainer,
     Input,
     Modal,
@@ -1328,6 +1426,19 @@ export default {
 </script>
 
 <style scoped>
+.postponed::before {
+  content: "";
+  @apply absolute inset-0;
+  @apply grid place-items-center;
+  @apply text-red-600 text-2xl font-medium;
+}
+
+div.postponed {
+  @apply text-gray-400 text-opacity-70;
+  @apply bg-opacity-30;
+  @apply select-none;
+}
+
 .jumbotron {
   height: 720px;
   background-image: url("../assets/jumbotron-xs.png");
