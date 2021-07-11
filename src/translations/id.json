@@ -27,21 +27,21 @@
     "join": "ikuti live streaming",
     "show_me": "tunjukkan alamat"
   },
-  "protocol_prologue": "Sebagai upaya memutus mata rantai penularan COVID-19, protokol keselamatan ini akan kami terapkan pada acara pernikahan kami nanti",
+  "protocol_prologue": "Sebagai upaya memutus mata rantai penularan COVID-19, protokol kesehatan ini akan kami terapkan pada acara pernikahan kami nanti",
   "protocol": {
     "temperature_check": "Pengecekan Suhu Badan",
     "no_handshake": "Hindari Bersalaman",
     "physical_distancing": "Menjaga Jarak",
-    "maximum_capacity": "Kapasitas Maksimum",
+    "maximum_capacity": "Pengaturan Kapasitas",
     "handwash": "Mencuci Tangan",
     "mask": "Memakai Masker"
   },
   "protocol_warning": "semua tamu undangan wajib memperhatikan dan menaati protokol yang berlaku",
-  "sad_announcement": "Karena kita semua tengah berada di situasi pandemi COVID-19, sangat disayangkan kami tidak dapat mengundang semua teman terkasih kami ke upacara pernikahan kami.",
-  "attendance_limit": "Upacara pernikahan kami hanya dapat dihadiri oleh penerima surat undangan offline dari kami",
-  "live_streaming_prologue": "Namun, demi tetap dapat berbagi kebahagiaan, semua dapat menghadiri upacara pernikahan kami secara maya melalui live streaming baik prosesi akad maupun resepsi. Kami persilakan untuk bergabung pada",
+  "sad_announcement": "Dikarenakan situasi pandemi COVID-19 saat ini, sangat disayangkan kami tidak dapat mengundang semua teman terkasih untuk hadir pada upacara pernikahan kami.",
+  "attendance_limit": "Upacara pernikahan kami hanya dapat dihadiri oleh penerima surat undangan offline",
+  "live_streaming_prologue": "Namun, kami akan tetap berbagi kebahagiaan kepada semua teman terkasih baik saat prosesi akad maupun resepsi secara maya melalui",
   "live_streaming_time": "17 Juli 2021",
-  "on_instagram": "di instagram",
+  "on_instagram": "pada instagram",
   "wishes_prologue": "Tenang, masih bisa kirim doa & ucapan kok. Pastikan untuk mencantumkan nama yah, supaya semua bisa tau pengirimnya ^_^",
   "wishes_form": {
     "name_label": "Nama",
@@ -54,7 +54,7 @@
   "swipe_label": "Geser untuk lihat lebih banyak",
   "gift_prologue": "Kami juga menerima niat baik dalam wujud apapun. Jadi apabila ingin mengirimkan hadiah, kado, atau apapun itu silahkan kirim di alamat ini yah ^_^",
   "guest_form": {
-    "title": "BAIK, TAPI TUNGGU SEBENTAR",
+    "title": "ISI DATA DIRI",
     "subtitle": "Sebelum itu, mohon beritahu kami nama, nomor telepon, dan alamat lengkap terlebih dahulu yah. Terimakasih sebelumnya ^_^",
     "name_label": "Nama",
     "phone_label": "Nomor Telepon",
