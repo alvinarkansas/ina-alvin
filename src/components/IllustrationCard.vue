@@ -7,7 +7,7 @@
       width="96"
       height="96"
     />
-    <p class="text-center">{{ t(label) }}</p>
+    <p class="text-center">{{ label }}</p>
   </div>
 </template>
 

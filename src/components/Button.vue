@@ -6,12 +6,11 @@
       bg-red-900
       text-white
       font-bold
-      transform
-      hover:scale-105
-      transition-all
       uppercase
     "
+    :class="disabled ? 'bg-opacity-10' : 'transform hover:scale-105 transition-all'"
     @click="$emit('click')"
+    :disabled="disabled"
   >
     {{ label }}
   </button>
@@ -28,6 +27,10 @@ export default {
     label: {
       type: String,
       default: "button",
+    },
+    disabled: {
+      type: Boolean,
+      default: false,
     },
   },
 };
