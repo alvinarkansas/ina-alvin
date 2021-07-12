@@ -33,6 +33,7 @@ export default {
     imgLarge.style.width = "100%";
     imgLarge.style.height = "100%";
     imgLarge.style.transition = "opacity 1s linear";
+    imgLarge.alt = `PHOTO-${this.id}`;
     largePicture.appendChild(imgLarge);
     // };
   },
