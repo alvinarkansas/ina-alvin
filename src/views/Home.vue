@@ -300,6 +300,8 @@
             src="../assets/deco/batik-deco-small-5.png"
             alt="ICON"
             class="w-6 md:w-8"
+            :width="screenWidth < 772 ? '24' : '32'"
+            :height="screenWidth < 772 ? '24' : '32'"
           />
           <p class="text-center">{{ t("surah") }}</p>
           <p>(QS Ar-Rum 21)</p>
@@ -360,7 +362,12 @@
                 href="https://www.instagram.com/sakinahhbb/"
                 target="_blank"
               >
-                <img src="../assets/ina-round.png" alt="Nurus Sakinah" />
+                <img
+                  :width="screenWidth < 772 ? '64' : '128'"
+                  :height="screenWidth < 772 ? '64' : '128'"
+                  src="../assets/ina-round.png"
+                  alt="Nurus Sakinah"
+                />
               </a>
             </div>
             <p class="font-bold">NURUS SAKINAH <br />(INA)</p>
@@ -408,7 +415,12 @@
                 href="https://www.instagram.com/alvinarkansas/"
                 target="_blank"
               >
-                <img src="../assets/alvin-round.png" alt="Alvin Arkansas" />
+                <img
+                  :width="screenWidth < 772 ? '64' : '128'"
+                  :height="screenWidth < 772 ? '64' : '128'"
+                  src="../assets/alvin-round.png"
+                  alt="Alvin Arkansas"
+                />
               </a>
             </div>
             <p class="font-bold">
@@ -450,14 +462,26 @@
               src="../assets/deco/batik-deco-small-1.png"
               class="w-6 md:w-8"
               alt="ICON"
+              :width="screenWidth < 772 ? '24' : '32'"
+              :height="screenWidth < 772 ? '24' : '32'"
             />
 
             <div
               class="grid grid-flow-col gap-4 auto-cols-max place-items-center"
             >
-              <img src="../assets/deco/batik-deco-small-3.png" alt="\" />
+              <img
+                src="../assets/deco/batik-deco-small-3.png"
+                alt="\"
+                width="8"
+                height="9"
+              />
               <p class="font-medium md:text-2xl">AKAD</p>
-              <img src="../assets/deco/batik-deco-small-4.png" alt="/" />
+              <img
+                src="../assets/deco/batik-deco-small-4.png"
+                alt="/"
+                width="8"
+                height="9"
+              />
             </div>
 
             <p class="font-medium md:text-2xl">
@@ -508,6 +532,8 @@
               src="../assets/deco/batik-deco-small-2.png"
               class="w-6 md:w-8 opacity-20"
               alt="ICON"
+              :width="screenWidth < 772 ? '24' : '32'"
+              :height="screenWidth < 772 ? '24' : '32'"
             />
 
             <div
@@ -517,6 +543,8 @@
                 src="../assets/deco/batik-deco-small-3.png"
                 class="opacity-20"
                 alt="\"
+                width="8"
+                height="9"
               />
               <p class="font-medium md:text-2xl">
                 RESEPSI
@@ -526,6 +554,8 @@
                 src="../assets/deco/batik-deco-small-4.png"
                 class="opacity-20"
                 alt="/"
+                width="8"
+                height="9"
               />
             </div>
 
@@ -576,6 +606,8 @@
               src="../assets/deco/batik-deco-small-2.png"
               class="w-6 md:w-8 opacity-20"
               alt="ICON"
+              :width="screenWidth < 772 ? '24' : '32'"
+              :height="screenWidth < 772 ? '24' : '32'"
             />
 
             <div
@@ -585,6 +617,8 @@
                 src="../assets/deco/batik-deco-small-3.png"
                 class="opacity-20"
                 alt="\"
+                width="8"
+                height="9"
               />
               <p class="font-medium md:text-2xl">
                 RESEPSI
@@ -594,6 +628,8 @@
                 src="../assets/deco/batik-deco-small-4.png"
                 class="opacity-20"
                 alt="/"
+                width="8"
+                height="9"
               />
             </div>
 
@@ -703,14 +739,26 @@
             src="../assets/deco/batik-deco-small-6.png"
             class="w-6 md:w-8"
             alt="ICON"
+            :width="screenWidth < 772 ? '24' : '32'"
+            :height="screenWidth < 772 ? '24' : '32'"
           />
 
           <div
             class="grid grid-flow-col gap-4 auto-cols-max place-items-center"
           >
-            <img src="../assets/deco/batik-deco-small-3.png" alt="\" />
+            <img
+              src="../assets/deco/batik-deco-small-3.png"
+              alt="\"
+              width="8"
+              height="9"
+            />
             <p class="font-medium md:text-2xl">LIVE STREAMING</p>
-            <img src="../assets/deco/batik-deco-small-4.png" alt="/" />
+            <img
+              src="../assets/deco/batik-deco-small-4.png"
+              alt="/"
+              width="8"
+              height="9"
+            />
           </div>
 
           <p class="md:text-xl">{{ t("on_instagram") }}</p>
@@ -745,7 +793,12 @@
                 href="https://www.instagram.com/sakinahhbb/"
                 target="_blank"
               >
-                <img src="../assets/ina-round.png" alt="Nurus Sakinah" />
+                <img
+                  src="../assets/ina-round.png"
+                  alt="Nurus Sakinah"
+                  :width="screenWidth < 772 ? '64' : '128'"
+                  :height="screenWidth < 772 ? '64' : '128'"
+                />
               </a>
               <p
                 class="
@@ -802,7 +855,12 @@
                 href="https://www.instagram.com/alvinarkansas/"
                 target="_blank"
               >
-                <img src="../assets/alvin-round.png" alt="Alvin Arkansas" />
+                <img
+                  src="../assets/alvin-round.png"
+                  alt="Alvin Arkansas"
+                  :width="screenWidth < 772 ? '64' : '128'"
+                  :height="screenWidth < 772 ? '64' : '128'"
+                />
               </a>
               <p
                 class="
