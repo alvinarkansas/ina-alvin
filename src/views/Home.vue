@@ -499,13 +499,9 @@
 
             <p class="text-gray-500">
               Jl. Raya Kembang, Krajan, Candirenggo, Kec. Singosari, Malang,
-              Jawa Timur 65153
+              Jawa Timur
             </p>
 
-            <!-- <Button
-              :label="t('button.join')"
-              @click="openInNewTab('https://www.instagram.com/sakinahhbb/')"
-            /> -->
             <button
               class="
                 py-2
@@ -517,12 +513,9 @@
                 text-white
                 font-bold
                 uppercase
-                transform
-                hover:scale-105
-                transition-all
                 animate-bounce
               "
-              @click="openInNewTab('https://www.instagram.com/sakinahhbb/')"
+              @click="openInNewTab('https://bit.ly/ina-alvin-akad')"
             >
               {{ t("button.join") }}
             </button>
@@ -745,185 +738,6 @@
         <p class="md:text-lg w-3/4 md:w-1/2">
           {{ t("live_streaming_prologue") }}
         </p>
-
-        <!-- <div
-          class="
-            bg-linen bg-opacity-50
-            w-full
-            sm:w-3/4
-            lg:w-1/3
-            grid
-            gap-6
-            place-items-center
-            px-4
-            md:px-12
-            py-12
-          "
-        >
-          <img
-            src="../assets/deco/batik-deco-small-6.png"
-            class="w-6 md:w-8"
-            alt="ICON"
-            :width="screenWidth < 772 ? '24' : '32'"
-            :height="screenWidth < 772 ? '24' : '32'"
-          />
-
-          <div
-            class="grid grid-flow-col gap-4 auto-cols-max place-items-center"
-          >
-            <img
-              src="../assets/deco/batik-deco-small-3.png"
-              alt="\"
-              width="8"
-              height="9"
-            />
-            <p class="font-medium md:text-2xl">LIVE STREAMING</p>
-            <img
-              src="../assets/deco/batik-deco-small-4.png"
-              alt="/"
-              width="8"
-              height="9"
-            />
-          </div>
-
-          <p class="md:text-xl">{{ t("on_youtube") }}</p>
-
-          <div class="grid grid-cols-2 place-items-center gap-x-8 gap-y-6">
-            <div
-              class="
-                rounded-full
-                h-16
-                md:h-32
-                w-16
-                md:w-32
-                bg-gradient-to-t
-                from-yellow-600
-                via-red-500
-                to-purple-400
-                p-1
-                md:p-2
-                select-none
-                relative
-              "
-            >
-              <a
-                class="
-                  block
-                  rounded-full
-                  ring-2
-                  md:ring-4
-                  ring-white
-                  cursor-pointer
-                "
-                href="https://www.instagram.com/sakinahhbb/"
-                target="_blank"
-              >
-                <img
-                  src="../assets/ina-round.png"
-                  alt="Nurus Sakinah"
-                  :width="screenWidth < 772 ? '64' : '128'"
-                  :height="screenWidth < 772 ? '64' : '128'"
-                />
-              </a>
-              <p
-                class="
-                  text-2xs
-                  sm:text-xs
-                  md:text-sm
-                  py-0.5
-                  sm:py-1
-                  px-2
-                  rounded
-                  bg-purple-400
-                  text-white
-                  absolute
-                  -bottom-1
-                  sm:-bottom-3
-                  left-1/2
-                  transform
-                  -translate-x-1/2
-                  bg-gradient-to-t
-                  from-yellow-600
-                  to-red-500
-                  font-bold
-                "
-              >
-                LIVE
-              </p>
-            </div>
-            <div
-              class="
-                rounded-full
-                h-16
-                md:h-32
-                w-16
-                md:w-32
-                bg-gradient-to-t
-                from-yellow-600
-                via-red-500
-                to-purple-400
-                p-1
-                md:p-2
-                select-none
-                relative
-              "
-            >
-              <a
-                class="
-                  block
-                  rounded-full
-                  ring-2
-                  md:ring-4
-                  ring-white
-                  cursor-pointer
-                "
-                href="https://www.instagram.com/alvinarkansas/"
-                target="_blank"
-              >
-                <img
-                  src="../assets/alvin-round.png"
-                  alt="Alvin Arkansas"
-                  :width="screenWidth < 772 ? '64' : '128'"
-                  :height="screenWidth < 772 ? '64' : '128'"
-                />
-              </a>
-              <p
-                class="
-                  text-2xs
-                  sm:text-xs
-                  md:text-sm
-                  py-0.5
-                  sm:py-1
-                  px-2
-                  rounded
-                  bg-purple-400
-                  text-white
-                  absolute
-                  -bottom-1
-                  sm:-bottom-3
-                  left-1/2
-                  transform
-                  -translate-x-1/2
-                  bg-gradient-to-t
-                  from-yellow-600
-                  to-red-500
-                  font-bold
-                "
-              >
-                LIVE
-              </p>
-            </div>
-            <p class="md:text-lg font-cormorant-infant row-auto">@sakinahhbb</p>
-            <p class="md:text-lg font-cormorant-infant">@alvinarkansas</p>
-          </div>
-
-          <p class="md:text-xl">{{ t("live_streaming_time") }}</p>
-
-          <Button
-            :label="t('button.join')"
-            @click="openInNewTab('https://www.instagram.com/sakinahhbb/')"
-          />
-        </div> -->
       </div>
     </section>
 
