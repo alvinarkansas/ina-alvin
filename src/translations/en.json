@@ -39,9 +39,10 @@
   "protocol_warning": "all guests and invitees should pay attention and obey the applied health protocol",
   "sad_announcement": "And due to COVID-19, we are sad to announce that we are unable to invite every single one of our beloved friends to the wedding ceremony.",
   "attendance_limit": "The wedding ceremony will be limited to those who receive our offline invitation",
-  "live_streaming_prologue": "However, to still be able to share our happiness, we decided to host a virtual live video ceremony for those who don't receive our invitation letter. We hope you will be joining us via our instagram live for this happy occasion.",
+  "live_streaming_prologue": "However, to still be able to share our happiness, we decided to host a virtual live video ceremony for those who don't receive our invitation letter. We hope you will be joining us via live streaming for this happy occasion.",
   "live_streaming_time": "July 17, 2021 at time of event",
   "on_instagram": "on instagram",
+  "on_youtube": "on youtube",
   "wishes_prologue": "Yes, you can still send us wishes! Make sure you write down your name so that all of us can recognize you easily ^_^",
   "wishes_form": {
     "name_label": "Name",
