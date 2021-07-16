@@ -1,14 +1,9 @@
 <template>
   <button
-    class="
-      py-2
-      px-4
-      bg-red-900
-      text-white
-      font-bold
-      uppercase
+    class="py-2 px-4 bg-red-900 text-white font-bold uppercase"
+    :class="
+      disabled ? 'bg-opacity-10' : 'transform hover:scale-105 transition-all'
     "
-    :class="disabled ? 'bg-opacity-10' : 'transform hover:scale-105 transition-all'"
     @click="$emit('click')"
     :disabled="disabled"
   >

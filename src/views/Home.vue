@@ -493,7 +493,7 @@
                 <span>JULY </span>
                 <span class="font-gilda">17, </span>
               </template>
-              <span class="font-gilda">2021 10.00 </span>
+              <span class="font-gilda">2021 09.00 </span>
               <span>WIB</span>
             </p>
 
@@ -501,6 +501,31 @@
               Jl. Raya Kembang, Krajan, Candirenggo, Kec. Singosari, Malang,
               Jawa Timur 65153
             </p>
+
+            <!-- <Button
+              :label="t('button.join')"
+              @click="openInNewTab('https://www.instagram.com/sakinahhbb/')"
+            /> -->
+            <button
+              class="
+                py-2
+                px-4
+                bg-gradient-to-tr
+                from-yellow-600
+                via-red-500
+                to-purple-400
+                text-white
+                font-bold
+                uppercase
+                transform
+                hover:scale-105
+                transition-all
+                animate-bounce
+              "
+              @click="openInNewTab('https://www.instagram.com/sakinahhbb/')"
+            >
+              {{ t("button.join") }}
+            </button>
           </div>
         </div>
 
@@ -721,7 +746,7 @@
           {{ t("live_streaming_prologue") }}
         </p>
 
-        <div
+        <!-- <div
           class="
             bg-linen bg-opacity-50
             w-full
@@ -761,7 +786,7 @@
             />
           </div>
 
-          <p class="md:text-xl">{{ t("on_instagram") }}</p>
+          <p class="md:text-xl">{{ t("on_youtube") }}</p>
 
           <div class="grid grid-cols-2 place-items-center gap-x-8 gap-y-6">
             <div
@@ -898,7 +923,7 @@
             :label="t('button.join')"
             @click="openInNewTab('https://www.instagram.com/sakinahhbb/')"
           />
-        </div>
+        </div> -->
       </div>
     </section>
 
@@ -1286,7 +1311,7 @@ export default {
     countdown() {
       const timer = setInterval(() => {
         const now = new Date().getTime();
-        const weddingDay = new Date("Jul 17, 2021 09:30:00").getTime();
+        const weddingDay = new Date("Jul 17, 2021 09:00:00").getTime();
         const distance = weddingDay - now;
 
         if (distance < 0) {
