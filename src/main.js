@@ -7,12 +7,12 @@ import en from "../src/translations/en.json";
 import id from "../src/translations/id.json";
 
 const i18n = createI18n({
-  locale: "en",
+  locale: "id",
   messages: {
     en,
     id,
   },
-  fallbackLocale: "en",
+  fallbackLocale: "id",
 });
 
 createApp(App).use(router).use(i18n).mount("#app");
