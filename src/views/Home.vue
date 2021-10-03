@@ -502,23 +502,6 @@
               Jawa Timur
             </p>
 
-            <button
-              class="
-                py-2
-                px-4
-                bg-gradient-to-tr
-                from-yellow-600
-                via-red-500
-                to-purple-400
-                text-white
-                font-bold
-                uppercase
-                animate-bounce
-              "
-              @click="openInNewTab('https://bit.ly/ina-alvin-akad')"
-            >
-              {{ t("button.join") }}
-            </button>
           </div>
         </div>
 
@@ -526,29 +509,30 @@
           class="
             w-full
             grid
+            place-items-center
             gap-4
             md:gap-16
             md:px-32
-            md:grid-flow-col md:grid-cols-2
+            md:grid-flow-col
             md:text-lg
           "
         >
           <div
             class="
+              w-full
+              md:w-2/3
               bg-linen bg-opacity-50
               grid
               gap-4
               place-items-center
               px-4
-              md:px-12
               py-12
-              postponed
               relative
             "
           >
             <img
               src="../assets/deco/batik-deco-small-2.png"
-              class="w-6 md:w-8 opacity-20"
+              class="w-6 md:w-8"
               alt="ICON"
               :width="screenWidth < 772 ? '24' : '32'"
               :height="screenWidth < 772 ? '24' : '32'"
@@ -559,103 +543,36 @@
             >
               <img
                 src="../assets/deco/batik-deco-small-3.png"
-                class="opacity-20"
                 alt="\"
                 width="8"
                 height="9"
               />
               <p class="font-medium md:text-2xl">
                 RESEPSI
-                <span class="font-gilda font-medium md:text-2xl">1</span>
               </p>
               <img
                 src="../assets/deco/batik-deco-small-4.png"
-                class="opacity-20"
                 alt="/"
                 width="8"
                 height="9"
               />
             </div>
 
-            <p>{{ t("invitation.malang_date") }}</p>
-
-            <div>
-              <p>{{ t("invitation.session") }} 1: 16.00 WIB</p>
-              <p>{{ t("invitation.session") }} 2: 18.30 WIB</p>
-            </div>
-
-            <p>Taman Indie Resto</p>
-
-            <p>Jl. Araya Megah No. 9, Pandanwangi Kec. Blimbing, Kota Malang</p>
-
-            <span
-              class="
-                w-full
-                py-16
-                px-2
-                text-xl text-red-900
-                md:text-2xl
-                bg-linen-dark bg-opacity-40
-                font-bold
-                absolute
-                top-1/2
-                left-1/2
-                transform
-                -translate-x-1/2 -translate-y-1/2
-              "
-            >
-              {{ t("postponed") }}
-            </span>
-          </div>
-
-          <div
-            class="
-              bg-linen bg-opacity-50
-              grid
-              gap-4
-              place-items-center
-              px-4
-              py-12
-              postponed
-              relative
-            "
-          >
-            <img
-              src="../assets/deco/batik-deco-small-2.png"
-              class="w-6 md:w-8 opacity-20"
-              alt="ICON"
-              :width="screenWidth < 772 ? '24' : '32'"
-              :height="screenWidth < 772 ? '24' : '32'"
-            />
-
-            <div
-              class="grid grid-flow-col gap-4 auto-cols-max place-items-center"
-            >
-              <img
-                src="../assets/deco/batik-deco-small-3.png"
-                class="opacity-20"
-                alt="\"
-                width="8"
-                height="9"
-              />
-              <p class="font-medium md:text-2xl">
-                RESEPSI
-                <span class="font-gilda font-medium md:text-2xl">2</span>
-              </p>
-              <img
-                src="../assets/deco/batik-deco-small-4.png"
-                class="opacity-20"
-                alt="/"
-                width="8"
-                height="9"
-              />
-            </div>
-
-            <p>24 Juli 2021</p>
+            <p class="font-medium md:text-2xl">
+              <template v-if="$i18n.locale === 'id'">
+                <span class="font-gilda">16 </span>
+                <span>OKTOBER </span>
+              </template>
+              <template v-else>
+                <span>OCTOBER </span>
+                <span class="font-gilda">16, </span>
+              </template>
+              <span class="font-gilda">2021 </span>
+            </p>
 
             <div>
               <p>Sesi 1: 15.00 WIB</p>
-              <p>Sesi 2: 17.30 WIB</p>
+              <p>Sesi 2: 16.30 WIB</p>
             </div>
 
             <p>Hotel Indoluxe Yogyakarta</p>
@@ -665,24 +582,6 @@
               Sleman, DIY
             </p>
 
-            <span
-              class="
-                w-full
-                py-16
-                px-2
-                text-xl text-red-900
-                md:text-2xl
-                bg-linen-dark bg-opacity-40
-                font-bold
-                absolute
-                top-1/2
-                left-1/2
-                transform
-                -translate-x-1/2 -translate-y-1/2
-              "
-            >
-              {{ t("postponed") }}
-            </span>
           </div>
         </div>
 
@@ -1125,7 +1024,7 @@ export default {
     countdown() {
       const timer = setInterval(() => {
         const now = new Date().getTime();
-        const weddingDay = new Date("Jul 17, 2021 09:00:00").getTime();
+        const weddingDay = new Date("Oct 16, 2021 15:00:00").getTime();
         const distance = weddingDay - now;
 
         if (distance < 0) {
