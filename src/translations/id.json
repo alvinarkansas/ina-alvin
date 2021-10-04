@@ -19,7 +19,8 @@
   "invitation": {
     "malang_date": "17 Juli 2021",
     "jogja_date": "24 Juli, 2021",
-    "session": "Sesi"
+    "session": "Sesi",
+    "listed_on_invitation": "Jam tertera pada undangan"
   },
   "postponed": "ditunda",
   "button": {

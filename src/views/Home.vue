@@ -571,17 +571,20 @@
             </p>
 
             <div>
-              <p>Sesi 1: 15.00 WIB</p>
-              <p>Sesi 2: 16.30 WIB</p>
+              <p>{{ t("invitation.listed_on_invitation") }}</p>
             </div>
 
             <p>Hotel Indoluxe Yogyakarta</p>
 
-            <p>
+            <p class="text-gray-500">
               Jl. Palagan Tentara Pelajar No.106, Sariharjo, Kec. Ngaglik,
               Sleman, DIY
             </p>
 
+            <Button
+              :label="t('button.view_location')"
+              @click="openInNewTab(INDOLUXE_LOC_URL)"
+            />
           </div>
         </div>
 
@@ -632,10 +635,6 @@
 
         <p class="font-semibold md:text-lg w-3/4 md:w-1/2">
           {{ t("attendance_limit") }}
-        </p>
-
-        <p class="md:text-lg w-3/4 md:w-1/2">
-          {{ t("live_streaming_prologue") }}
         </p>
       </div>
     </section>

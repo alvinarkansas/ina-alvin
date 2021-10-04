@@ -19,7 +19,8 @@
   "invitation": {
     "malang_date": "July 17, 2021",
     "jogja_date": "July 24, 2021",
-    "session": "Session"
+    "session": "Session",
+    "listed_on_invitation": "Time listed on your invitation"
   },
   "postponed": "postponed",
   "button": {
