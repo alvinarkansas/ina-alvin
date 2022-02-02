@@ -1,27 +1,5 @@
 # ina-alvin
 
-Recreated due to unsolved issue
+And one of His signs is that He created mates for you from yourselves that you may find rest in them, and He put between you love and compassion; most surely there are signs in this for a people who reflect.
 
-![jumbotron-xs](https://github.com/alvinarkansas/ina-alvin/blob/main/src/asseets/jumbotron-xs.png?raw=true)
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+This is a part of my learning path and my first encounter with i18n, it was fun.
